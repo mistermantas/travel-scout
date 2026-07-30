@@ -1,34 +1,64 @@
 # Travel Scout
 
-Travel Scout finds evidence-backed accommodation deals for flexible 2-6 night stays in European cities. It has a local web UI for comparing offers and editing settings, plus a CLI that prints accepted deals and writes complete Markdown/JSON reports.
+Travel Scout finds evidence-backed accommodation deals for flexible 2-6 night stays in European cities. The product is a mobile-first React app with Capacitor iOS/Android shells, a Node checker API, and a CLI that prints accepted deals and writes complete Markdown/JSON reports.
 
 It does not book, message hosts, bypass anti-bot controls, or pretend missing amenities are confirmed.
 
-## Start the UI
+## Start the App
 
-Requirements: Node.js 20+ and npm.
+Requirements: Node.js 22+ and npm. Capacitor 8 requires Node 22.
+
+Development, with Vite on port 4173 and the checker API on port 4174:
 
 ```bash
 npm install
-npm start
+npm run dev
 ```
 
 Open [http://127.0.0.1:4173](http://127.0.0.1:4173).
 
-The first screen uses cached source data, so it works without API keys. From the UI you can:
-
-- Compare accepted offers by value, price, rating, or confidence.
-- Open the intentional Excluded view for rejection reasons.
-- Inspect amenity and transit evidence before opening a provider page.
-- Select cities, stays, date horizon, price bands, quality thresholds, amenities, and sources.
-- Save personal settings to ignored `config.local.json`.
-- Run a fast cached check or explicitly start the slower Codex CLI web search.
-
-Use another port with:
+Production build and local server:
 
 ```bash
-npm start -- --port 4300
+npm start
 ```
+
+The first screen is Explore, with checked-in cached results available before an API is configured. The app supports:
+
+- Ranked accepted stays with the EUR 35/50/80 price bands visible.
+- A local shortlist that persists on the device.
+- Full amenity, transit, manual-check, score, and source evidence.
+- A deliberate excluded-offer view with rejection reasons.
+- Dedicated search settings for cities, dates, prices, quality, amenities, and sources.
+- Fast cached checks and a separate explicit Codex web-search action.
+- Loading, cached/offline, empty, source-error, and API-connected states.
+
+The app uses relative `/api` routes in browser development and production. A native build uses `VITE_API_BASE_URL` when set. Without it, the app remains useful with the checked-in result snapshot and labels that state `Cached snapshot`; it does not claim the Node checker runs on-device.
+
+## Run on iOS or Android
+
+Create `.env.local` when a device should call a hosted or LAN-accessible checker:
+
+```bash
+VITE_API_BASE_URL=https://travel-api.example.com
+```
+
+Build and sync both native projects:
+
+```bash
+npm run cap:sync
+```
+
+Open or run a platform:
+
+```bash
+npm run cap:open:ios
+npm run cap:open:android
+npm run cap:run:ios
+npm run cap:run:android
+```
+
+`ios/` and `android/` are committed native shells. Capacitor consumes `web-dist/`, which is generated and ignored. Xcode is required for iOS. Android Studio, a JDK, and the Android SDK are required for Android.
 
 ## Run the CLI
 
@@ -123,7 +153,7 @@ Then enable `serpapi_google_hotels` in the UI or `sources_enabled`. Google Hotel
 
 ## Configuration
 
-Edit `config.example.json` for versioned defaults or use the UI and save a local config. Important fields:
+Edit `config.example.json` for versioned defaults or use Settings. App settings persist in local storage; when the checker API is reachable they are also saved to ignored `config.local.json`. Important fields:
 
 - `cities`, `excluded_cities`
 - `preferred_nightly_price_eur`, `price_penalty_threshold_eur`, `max_nightly_price_eur`
@@ -166,7 +196,7 @@ npm run test
 npm run build
 ```
 
-Tests cover config validation, date windows, filtering, scoring, transit, source normalization, source failure isolation, reports, state persistence, and HTTP API behavior.
+Tests cover config validation, date windows, filtering, scoring, transit, source normalization, source failure isolation, reports, state persistence, HTTP API behavior, CORS, and production app serving. `npm audit` is expected to report zero vulnerabilities.
 
 ## Scheduling
 
@@ -177,8 +207,15 @@ For a personal machine, schedule the CLI with cron. For stronger uptime and secr
 ## Project Layout
 
 ```text
-public/             Local web UI
-src/server.ts       HTTP API and static server
+app/                React mobile app
+public/             App icons and destination imagery
+resources/          Source artwork for native icon and splash assets
+web-dist/           Generated Vite bundle, ignored
+ios/                Capacitor iOS project
+android/            Capacitor Android project
+capacitor.config.ts Native app and webDir contract
+vite.config.ts      App build and API development proxy
+src/server.ts       HTTP API and production app server
 src/checker.ts      Shared source/ranking orchestration
 src/cli.ts          Console entry point
 src/sources/        Source adapters

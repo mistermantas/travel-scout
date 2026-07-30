@@ -1,5 +1,5 @@
 import { createServer, type IncomingMessage, type Server, type ServerResponse } from "node:http";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { runChecker, type CheckRun } from "./checker.js";
 import { configToRaw, loadRawConfig, parseConfig, type RawConfig } from "./config.js";
@@ -14,15 +14,6 @@ const SOURCE_CATALOG = [
   { id: "serpapi_google_hotels", label: "SerpAPI Google Hotels", kind: "API key" },
   { id: "fixture", label: "Synthetic fixture", kind: "demo" }
 ] as const;
-
-const STATIC_FILES: Record<string, { file: string; contentType: string }> = {
-  "/": { file: "public/index.html", contentType: "text/html; charset=utf-8" },
-  "/index.html": { file: "public/index.html", contentType: "text/html; charset=utf-8" },
-  "/app.css": { file: "public/app.css", contentType: "text/css; charset=utf-8" },
-  "/app.js": { file: "public/app.js", contentType: "text/javascript; charset=utf-8" },
-  "/favicon.svg": { file: "public/favicon.svg", contentType: "image/svg+xml" },
-  "/vendor/lucide.js": { file: "node_modules/lucide/dist/umd/lucide.js", contentType: "text/javascript; charset=utf-8" }
-};
 
 export interface TravelServerOptions {
   rootDir?: string;
@@ -44,6 +35,10 @@ export function createTravelServer(options: TravelServerOptions = {}): Server {
   return createServer(async (request, response) => {
     try {
       const url = new URL(request.url ?? "/", "http://localhost");
+      if (request.method === "OPTIONS" && url.pathname.startsWith("/api/")) {
+        sendEmpty(response, 204);
+        return;
+      }
       if (request.method === "GET" && url.pathname === "/api/health") {
         sendJson(response, 200, { ok: true, service: "travel-scout" });
         return;
@@ -93,14 +88,8 @@ export function createTravelServer(options: TravelServerOptions = {}): Server {
         sendJson(response, 200, { ok: true, config: raw });
         return;
       }
-      if (request.method === "GET" && STATIC_FILES[url.pathname]) {
-        const asset = STATIC_FILES[url.pathname];
-        const data = await readFile(path.join(rootDir, asset.file));
-        response.writeHead(200, {
-          "content-type": asset.contentType,
-          "cache-control": "no-store"
-        });
-        response.end(data);
+      if (request.method === "GET" && !url.pathname.startsWith("/api/")) {
+        await serveApp(response, rootDir, url.pathname);
         return;
       }
       sendJson(response, 404, { error: "Not found." });
@@ -154,9 +143,61 @@ async function readJsonBody(request: IncomingMessage): Promise<unknown> {
 function sendJson(response: ServerResponse, status: number, body: unknown): void {
   response.writeHead(status, {
     "content-type": "application/json; charset=utf-8",
-    "cache-control": "no-store"
+    "cache-control": "no-store",
+    ...corsHeaders()
   });
   response.end(`${JSON.stringify(body)}\n`);
+}
+
+function sendEmpty(response: ServerResponse, status: number): void {
+  response.writeHead(status, corsHeaders());
+  response.end();
+}
+
+async function serveApp(response: ServerResponse, rootDir: string, pathname: string): Promise<void> {
+  const webDir = path.join(rootDir, "web-dist");
+  const relativePath = pathname === "/" ? "index.html" : pathname.replace(/^\/+/, "");
+  const requestedPath = path.resolve(webDir, relativePath);
+  const safePath = requestedPath.startsWith(`${webDir}${path.sep}`) ? requestedPath : path.join(webDir, "index.html");
+  const filePath = (await isFile(safePath)) ? safePath : path.join(webDir, "index.html");
+  const data = await readFile(filePath);
+  response.writeHead(200, {
+    "content-type": contentType(filePath),
+    "cache-control": path.basename(filePath) === "index.html" ? "no-store" : "public, max-age=31536000, immutable"
+  });
+  response.end(data);
+}
+
+async function isFile(filePath: string): Promise<boolean> {
+  try {
+    return (await stat(filePath)).isFile();
+  } catch {
+    return false;
+  }
+}
+
+function contentType(filePath: string): string {
+  const extension = path.extname(filePath).toLowerCase();
+  return {
+    ".html": "text/html; charset=utf-8",
+    ".js": "text/javascript; charset=utf-8",
+    ".css": "text/css; charset=utf-8",
+    ".json": "application/json; charset=utf-8",
+    ".svg": "image/svg+xml",
+    ".png": "image/png",
+    ".jpg": "image/jpeg",
+    ".jpeg": "image/jpeg",
+    ".webp": "image/webp",
+    ".woff2": "font/woff2"
+  }[extension] ?? "application/octet-stream";
+}
+
+function corsHeaders(): Record<string, string> {
+  return {
+    "access-control-allow-origin": "*",
+    "access-control-allow-headers": "content-type",
+    "access-control-allow-methods": "GET, POST, OPTIONS"
+  };
 }
 
 function parseServerArgs(argv: string[]): { port: number; host: string } {

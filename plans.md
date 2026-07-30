@@ -4,7 +4,7 @@ This document is the execution source of truth. Keep it current as implementatio
 
 ## Current Objective
 
-Turn the working TypeScript/Node.js checker into a practical local product without weakening its conservative evidence rules. Preserve the current preferred defaults, expose useful configuration in a web UI, keep the CLI working, make source activity and warnings understandable, document real behavior, and publish the complete project to `mistermantas/travel-scout`.
+Replace the static local control panel with a polished mobile-first React/Vite/Capacitor app while preserving the verified TypeScript checker, reports, CLI, and preferred defaults. Deals must lead the product; shortlist, detail, excluded offers, settings, and source status must be useful phone workflows. Build native iOS and Android shells, verify web and native sync, document the actual runtime boundary, and publish the complete project to `mistermantas/travel-scout` on `main`.
 
 The existing Python prototype remains reference-only. JavaScript/TypeScript via npm is the supported runtime.
 
@@ -51,14 +51,33 @@ Productization sweep:
 - [x] README and operator documentation match the shipped CLI and UI.
 - [x] `main` is pushed to `https://github.com/mistermantas/travel-scout.git`.
 
+Capacitor app sweep:
+
+- [x] React/Vite replaces the framework-free browser UI.
+- [x] Explore, Saved, Settings, offer detail, and excluded-offer flows work on mobile.
+- [x] The app preserves EUR 35 preferred, EUR 50 penalty, EUR 80 maximum, preliminary-fee warnings, and blackout manual checks.
+- [x] Cached checked-in results make the native app useful without a configured API.
+- [x] A configured `VITE_API_BASE_URL` enables checker requests from native builds.
+- [x] Safe areas, touch targets, loading, offline, empty, error, and reduced-motion states are handled.
+- [x] `npm run dev`, `npm start`, `npm run cap:sync`, and native open/run commands are documented.
+- [x] Capacitor iOS and Android projects exist and sync successfully.
+- [x] Desktop and phone screenshots show no overflow or overlap.
+- [x] Core npm verification and deterministic deal generation still pass.
+- [ ] Final changes are committed and pushed to `main`.
+
 ## Architecture Overview
 
 ### Runtime
 
-- Node.js + TypeScript.
+- Node.js + TypeScript for checker, reports, CLI, API, and production host.
+- React + TypeScript + Vite for the app UI.
+- Capacitor for iOS and Android shells.
 - npm scripts for build, test, typecheck, lint, and CLI execution.
 - Prefer Node built-ins (`fs/promises`, `node:test`, `assert`, `fetch` if available) unless a dependency meaningfully improves correctness.
-- Local HTTP server and framework-free browser UI so installation remains small and the scoring engine stays the center of gravity.
+- Local HTTP server and React app share the checker contract; the UI never reimplements ranking.
+- Node compiles to `dist`; Vite builds to `web-dist`; Capacitor consumes `web-dist`.
+- Vite development proxies `/api` to the local checker server.
+- Native builds use `VITE_API_BASE_URL`; bundled checked-in results provide an explicit cached fallback.
 
 ### Suggested File Layout
 
@@ -143,13 +162,14 @@ Adapters must:
 
 ### Product Flow
 
-1. `npm start` builds and opens a local HTTP server.
-2. The server loads `config.local.json` when present, otherwise `config.example.json`.
-3. The browser edits search settings without requiring hand-edited JSON.
-4. A cached check runs all enabled snapshot/cache sources quickly.
-5. A live web check explicitly enables the slower `codex --search exec` adapter.
-6. The API returns accepted and excluded candidates, summary counts, per-source counts, score details, evidence, and warnings.
-7. Saving settings writes `config.local.json`; the versioned defaults remain unchanged.
+1. `npm run dev` starts Vite and the local checker API.
+2. Explore opens immediately from bundled checked-in results, then refreshes from the API when reachable.
+3. The user scans accepted deals, opens evidence, and saves promising options locally.
+4. Settings are a dedicated mobile view, not a permanent form beside the results.
+5. A cached check runs enabled snapshot/cache sources quickly; live Codex web search remains a separate explicit action.
+6. Excluded offers and source diagnostics remain inspectable from intentional secondary surfaces.
+7. Web saves may persist `config.local.json`; native preferences and shortlist persist locally.
+8. `npm run cap:sync` builds `web-dist` and syncs both native projects.
 
 ## Milestones
 
@@ -441,6 +461,76 @@ Verification commands:
 - `git status -sb`
 - `git ls-remote --heads origin main`
 
+### Milestone 12 - React/Vite and Capacitor Foundation [x]
+
+Scope:
+
+- Split Node and app TypeScript builds.
+- Add React, Vite, Capacitor, and Lucide React dependencies.
+- Add Vite proxy/build configuration and Capacitor configuration.
+- Update the Node production server to host `web-dist` with SPA fallback.
+- Generate iOS and Android projects.
+
+Acceptance criteria:
+
+- Existing CLI and tests still compile from the Node config.
+- `npm run dev` starts the app and API.
+- `npm run build` produces `dist` and `web-dist`.
+- `npm run cap:sync` succeeds for iOS and Android.
+
+Verification commands:
+
+- `npm run typecheck`
+- `npm run build`
+- `npm run cap:sync`
+
+### Milestone 13 - Mobile Travel Product [x]
+
+Scope:
+
+- Build Explore, Saved, Settings, offer detail, excluded-offer, and source-status flows.
+- Add compact city imagery, search context, shortlist persistence, cached/native fallback, and actionable warnings.
+- Preserve all editable checker settings while moving them into a focused settings screen.
+
+Acceptance criteria:
+
+- Deals, price bands, warning states, and save actions are immediately scannable at 390px.
+- Cards contain deal facts and controls, not explanatory feature copy.
+- Offer detail exposes all evidence, reasons, manual checks, source metadata, and the external listing.
+- Settings can reset, save locally, run cached search, and explicitly run live web search.
+- Cached, loading, error, empty, and offline states are coherent.
+
+Verification commands:
+
+- Browser flow at 390x844.
+- Browser flow at 1440x1000.
+- Console and request error inspection.
+
+### Milestone 14 - Native and Release Verification [ ]
+
+Scope:
+
+- Verify production serving, Vite development, Capacitor sync, native project configuration, CLI, reports, tests, and documentation.
+- Capture final desktop and mobile screenshots.
+- Review intended git scope, commit, push `main`, and confirm remote head.
+
+Acceptance criteria:
+
+- Core and UI tests pass.
+- No horizontal overflow, text clipping, or broken asset/API states.
+- README and runbook explain web/native development and the API boundary.
+- Remote `main` contains the verified app.
+
+Verification commands:
+
+- `npm run verify`
+- `npm run cap:sync`
+- Browser acceptance flow.
+- `git diff --check`
+- `git status -sb`
+- `git push origin main`
+- `git ls-remote --heads origin main`
+
 ## Risk Register
 
 1. OTA/API compliance risk
@@ -482,6 +572,16 @@ Verification commands:
 
 - Risk: The same property can appear through multiple sources and look like accidental duplication.
 - Mitigation: Preserve source-specific offers, expose source labels clearly, and include deterministic source counts rather than silently collapsing potentially different prices/evidence.
+
+9. Native API boundary
+
+- Risk: The Node checker cannot execute inside a Capacitor WebView.
+- Mitigation: Keep a typed HTTP API boundary, support `VITE_API_BASE_URL`, and ship checked-in cached results so native startup is still useful and honest when no API is configured.
+
+10. Native project churn
+
+- Risk: Generated iOS/Android files can make review noisy or drift from the web bundle.
+- Mitigation: Pin Capacitor packages, keep `webDir` explicit, verify `cap sync`, and document which generated files are committed.
 
 ## Demo / Acceptance Flow
 
@@ -529,3 +629,15 @@ Product UI:
 - Implemented decision: Use Lucide's local UMD bundle for UI icons so the control panel has no runtime CDN dependency.
 - Verified decision: Desktop and 390px mobile browser checks completed with no console errors or horizontal overflow; cached checks, evidence expansion, tabs, filtering, and the mobile settings action bar all worked.
 - Published decision: Initialize the requested empty public repository directly on `main`; root commit `82490fc` contains the complete verified project and sample reports.
+- Capacitor decision: Use the two existing apps only as read-only references and adopt their React/Vite/Capacitor, safe-area, and `dist`-bundle patterns.
+- Capacitor decision: Keep Node output in `dist` and app output in `web-dist` to avoid build collisions.
+- Capacitor decision: Make bundled checked-in results the native fallback; do not imply that the Node checker runs on-device.
+- Product decision: Replace the dashboard framing with deal-first Explore, local Saved, and dedicated Settings views.
+- Visual decision: Use honest city-level imagery as a compact first-viewport signal, never as property photography.
+- Implemented decision: Use React 19, Vite 6, Capacitor 8.4.2, and Lucide React; Node 22 is the minimum supported runtime.
+- Implemented decision: Persist shortlist and app preferences with local storage, while mirroring settings to `config.local.json` when the API is reachable.
+- Implemented decision: Serve `web-dist` with SPA fallback and CORS from the existing Node server; development proxies Vite to the checker on port 4174.
+- Verified decision: Browser passes at 390x844 and 1440x1000 show no console errors or horizontal overflow; Explore, detail, Saved, excluded offers, and settings persistence work.
+- Verified decision: `npm audit` reports zero vulnerabilities after updating `concurrently` and pinning a compatible safe `esbuild`.
+- Verified decision: Capacitor sync completes for both platforms, Xcode builds the unsigned iOS simulator app, and Gradle assembles the Android debug app.
+- Visual decision: Replace generated Capacitor branding with a Travel Scout compass app icon and launch screen on both native platforms.

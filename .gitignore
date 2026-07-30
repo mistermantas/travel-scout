@@ -1,6 +1,9 @@
 node_modules/
 dist/
+web-dist/
 config.local.json
+.env.local
+.env.*.local
 data/seen_results.json
 output/
 reports-websearch-smoke/

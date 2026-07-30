@@ -22,6 +22,12 @@ test("server exposes health, cached bootstrap, and config validation", async () 
     const health = await fetch(`${baseUrl}/api/health`);
     assert.equal(health.status, 200);
     assert.deepEqual(await health.json(), { ok: true, service: "travel-scout" });
+    assert.equal(health.headers.get("access-control-allow-origin"), "*");
+
+    const app = await fetch(baseUrl);
+    assert.equal(app.status, 200);
+    assert.match(app.headers.get("content-type") ?? "", /text\/html/);
+    assert.match(await app.text(), /<title>Travel Scout<\/title>/);
 
     const bootstrap = await fetch(`${baseUrl}/api/bootstrap`);
     assert.equal(bootstrap.status, 200);

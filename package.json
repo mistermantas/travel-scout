@@ -3,21 +3,49 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "description": "TypeScript travel-deal discovery agent for short European accommodation stays.",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
-    "lint": "tsc -p tsconfig.json --noEmit",
+    "dev": "concurrently -k -n api,app -c green,cyan \"npm:dev:api\" \"npm:dev:app\"",
+    "dev:api": "tsx src/server.ts --port 4174",
+    "dev:app": "vite --host 127.0.0.1 --port 4173",
+    "build": "npm run build:server && npm run build:app",
+    "build:server": "tsc -p tsconfig.node.json",
+    "build:app": "vite build",
+    "typecheck": "tsc -p tsconfig.node.json --noEmit && tsc -p tsconfig.app.json --noEmit",
+    "lint": "npm run typecheck",
     "test": "npm run build --silent && node --test dist/test/*.test.js",
-    "deals": "npm run build --silent && node dist/src/cli.js",
+    "deals": "npm run build:server --silent && node dist/src/cli.js",
     "start": "npm run build --silent && node dist/src/server.js",
+    "cap:sync": "npm run build:app && cap sync",
+    "cap:add:ios": "cap add ios",
+    "cap:add:android": "cap add android",
+    "cap:open:ios": "cap open ios",
+    "cap:open:android": "cap open android",
+    "cap:run:ios": "cap run ios",
+    "cap:run:android": "cap run android",
     "verify": "npm run lint && npm run test && npm run deals -- --config config.example.json --out reports --today 2026-07-04 --no-write-state"
   },
   "dependencies": {
-    "lucide": "^0.468.0"
+    "@capacitor/android": "8.4.2",
+    "@capacitor/core": "8.4.2",
+    "@capacitor/ios": "8.4.2",
+    "lucide-react": "0.546.0",
+    "react": "19.0.1",
+    "react-dom": "19.0.1"
   },
   "devDependencies": {
+    "@capacitor/cli": "8.4.2",
     "@types/node": "^20.14.10",
-    "typescript": "^5.5.3"
+    "@types/react": "19.0.12",
+    "@types/react-dom": "19.0.4",
+    "@vitejs/plugin-react": "5.0.4",
+    "concurrently": "9.2.4",
+    "esbuild": "0.27.2",
+    "tsx": "4.21.0",
+    "typescript": "5.8.2",
+    "vite": "6.4.3"
   }
 }

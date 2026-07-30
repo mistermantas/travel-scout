@@ -1,14 +1,39 @@
-# Travel Deal Discovery JS Agent
+# Travel Scout Mobile App
 
-You are Codex acting as a senior TypeScript/Node.js engineer and product-minded systems designer. Build the actual JavaScript/npm implementation of the travel-deal discovery agent in `/Users/mantas/Git/uncwo/travel`.
+You are Codex acting as a senior product designer, mobile frontend engineer, and TypeScript/Node.js engineer. Turn the working travel-deal checker in `/Users/mantas/Git/uncwo/travel` into a polished, mobile-first Capacitor app without weakening its evidence rules, CLI, or report contract.
 
-This repo currently contains a Python prototype. Treat it as reference behavior, not as the final implementation. Build a clean TypeScript/Node.js project with npm commands, tests, and a one-command CLI runner.
+Use `/Users/mantas/Git/uncwo/savoristic/frontend` and `/Users/mantas/Git/uncwo/resapienti/resapienti-pwa` as read-only architecture references. Follow their React, Vite, Capacitor, safe-area, and native shell patterns where they fit this product. Do not modify either reference project.
+
+The current static browser control panel is an implementation prototype, not the intended product. Replace it with a real app experience that helps the user scan, shortlist, inspect, and rerun accommodation searches from a phone.
 
 ## Product Goal
 
 Create a reliable scheduled travel-deal discovery agent for short-stay accommodation deals in European capitals and second-order cities. It must search flexible 2-6 night stays with no fixed dates, prioritize properties under EUR 35/night, require strong value through EUR 50/night, and allow preliminary prices through EUR 80/night with an explicit score penalty.
 
-The current productization phase must also deliver a usable local web control panel. Preserve the conversation-adjusted defaults: EUR 35 preferred, EUR 50 score-penalty threshold, EUR 80 preliminary-price hard cap, and blackout window covering as a visible manual-check warning rather than an automatic rejection. Keep CLI output focused on accepted deals.
+Preserve the conversation-adjusted defaults: EUR 35 preferred, EUR 50 score-penalty threshold, EUR 80 preliminary-price hard cap, and blackout window covering as a visible manual-check warning rather than an automatic rejection. Taxes and fees may remain preliminary, but uncertainty must be visible. Keep CLI output focused on accepted deals.
+
+## Mobile Product Goal
+
+- Deals are the first screen, not a settings dashboard or marketing page.
+- The primary mobile loop is scan deals, inspect evidence, save promising stays, adjust the search, and rerun it.
+- Provide useful Explore, Saved, and Settings views; do not add empty navigation destinations.
+- Keep source diagnostics and excluded offers available without letting them dominate the first screen.
+- Use generated or sourced city imagery honestly as destination-level atmosphere, never as a fake property photo.
+- Make price, city, dates, score, preliminary-price status, blackout warning, and source easy to scan.
+- Use compact, natural copy. Do not put feature descriptions inside deal cards.
+- Support loading, offline/cached, empty, error, and live-search states.
+- Respect device safe areas, dynamic viewport height, touch targets, reduced motion, and narrow screens.
+- Keep the palette restrained but not monochromatic, use Lucide icons, and keep card radius at 8px or less.
+
+## App Architecture
+
+- React + TypeScript + Vite for the app UI.
+- Capacitor for iOS and Android shells.
+- The Node server remains the local/deployed checker API and production web host.
+- The browser uses relative `/api` routes. Native builds use `VITE_API_BASE_URL` when configured.
+- When a native API is unavailable, the app opens with bundled checked-in results and clearly labels them as cached.
+- Local preferences and the shortlist must work in a WebView without a server.
+- Provide npm commands for web development, production serving, native sync, native open, and native run.
 
 Target cities include Warsaw, Krakow, Berlin, Cologne/Koln/Köln, Munich, Lisbon, and similar European capitals or second-order cities. Vilnius must be excluded by default.
 
@@ -146,7 +171,11 @@ The final JavaScript/npm implementation is done only when:
 - Tests cover date windows, scoring, filtering, transit confidence, source normalization, reporting, and seen-state behavior.
 - Documentation is accurate for the JS implementation.
 - No command relies on Python for core runtime behavior.
-- `npm start` launches a responsive local UI backed by the same checker used by the CLI.
+- `npm run dev` launches the Vite app and checker API for development.
+- `npm start` launches the production-built responsive app backed by the same checker used by the CLI.
+- `npm run cap:sync` builds the app and syncs iOS and Android projects.
+- The app is verified in desktop and mobile browsers, with no horizontal overflow, broken states, or incoherent overlap.
+- iOS and Android native projects exist and Capacitor configuration points at the production web bundle.
 - The UI exposes useful configuration, source activity, accepted/excluded views, evidence, and warnings.
 - Cached results work by default; live Codex CLI web search is explicit.
 - The verified project is published on `main` at `mistermantas/travel-scout`.
@@ -160,4 +189,4 @@ The final JavaScript/npm implementation is done only when:
 5. After each milestone, run the milestone verification commands and update `plans.md` and `documentation.md`.
 6. If reality differs from the plan, update the plan before or alongside the code change.
 
-Start now. Plan first. Then build until the npm implementation is genuinely complete and verified.
+Start now. Plan first. Then build, inspect in a browser after meaningful visual changes, and continue until the web and Capacitor implementation is genuinely complete, documented, committed, and pushed to `main`.
