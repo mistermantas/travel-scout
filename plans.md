@@ -49,7 +49,7 @@ Productization sweep:
 - [x] Desktop and mobile browser flows are verified with screenshots.
 - [x] `.gitignore` excludes dependencies, build output, local state, and browser artifacts.
 - [x] README and operator documentation match the shipped CLI and UI.
-- [ ] `main` is pushed to `https://github.com/mistermantas/travel-scout.git`.
+- [x] `main` is pushed to `https://github.com/mistermantas/travel-scout.git`.
 
 ## Architecture Overview
 
@@ -420,7 +420,7 @@ Verification commands:
 - `curl http://127.0.0.1:4173/api/health`
 - Desktop and mobile browser acceptance flow.
 
-### Milestone 11 - Documentation, Repository Hygiene, and GitHub [ ]
+### Milestone 11 - Documentation, Repository Hygiene, and GitHub [x]
 
 Scope:
 
@@ -528,3 +528,4 @@ Product UI:
 - Implemented decision: Store browser-saved settings in ignored `config.local.json`, leaving `config.example.json` as the stable preferred defaults.
 - Implemented decision: Use Lucide's local UMD bundle for UI icons so the control panel has no runtime CDN dependency.
 - Verified decision: Desktop and 390px mobile browser checks completed with no console errors or horizontal overflow; cached checks, evidence expansion, tabs, filtering, and the mobile settings action bar all worked.
+- Published decision: Initialize the requested empty public repository directly on `main`; root commit `82490fc` contains the complete verified project and sample reports.
