@@ -63,7 +63,7 @@ Capacitor app sweep:
 - [x] Capacitor iOS and Android projects exist and sync successfully.
 - [x] Desktop and phone screenshots show no overflow or overlap.
 - [x] Core npm verification and deterministic deal generation still pass.
-- [ ] Final changes are committed and pushed to `main`.
+- [x] Final changes are committed and pushed to `main`.
 
 ## Architecture Overview
 
@@ -506,7 +506,7 @@ Verification commands:
 - Browser flow at 1440x1000.
 - Console and request error inspection.
 
-### Milestone 14 - Native and Release Verification [ ]
+### Milestone 14 - Native and Release Verification [x]
 
 Scope:
 
@@ -641,3 +641,4 @@ Product UI:
 - Verified decision: `npm audit` reports zero vulnerabilities after updating `concurrently` and pinning a compatible safe `esbuild`.
 - Verified decision: Capacitor sync completes for both platforms, Xcode builds the unsigned iOS simulator app, and Gradle assembles the Android debug app.
 - Visual decision: Replace generated Capacitor branding with a Travel Scout compass app icon and launch screen on both native platforms.
+- Published decision: Commit `7c1fe13` is verified at `origin/main` for `mistermantas/travel-scout`.
