@@ -1,0 +1,1102 @@
+[
+  {
+    "accepted": true,
+    "is_new": true,
+    "city": "Bucharest",
+    "neighborhood": "Sector 1 / Piata Romana",
+    "source": "booking_snapshot",
+    "listing_name": "Little Bucharest downtown apartments Romana",
+    "url": "https://www.booking.com/hotel/ro/little-bucharest-downtown-apartments.html?aid=2438770&checkin=2026-11-09&checkout=2026-11-11&no_rooms=1&group_adults=1&selected_currency=EUR",
+    "dates_tested": "2026-11-09 to 2026-11-11",
+    "stay_length": 2,
+    "total_price_eur": 93.06,
+    "nightly_equivalent_eur": 46.53,
+    "rating": 8.7,
+    "rating_scale": 10,
+    "review_count": 459,
+    "amenity_evidence": {
+      "adjustable_climate_control": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the apartments include air conditioning and private heating.",
+        "source": "booking_snapshot"
+      },
+      "kitchen_or_kitchenette": {
+        "status": "confirmed",
+        "detail": "Booking property QA says all units include a kitchenette.",
+        "source": "booking_snapshot"
+      },
+      "stovetop": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the kitchenette features a stovetop; Hotels.com public text also lists stovetop.",
+        "source": "booking_snapshot"
+      },
+      "utensils": {
+        "status": "confirmed",
+        "detail": "Booking property QA says kitchenware is included; Hotels.com public text lists cookware/dishes/utensils.",
+        "source": "booking_snapshot"
+      },
+      "blackout_window_covering": {
+        "status": "confirmed",
+        "detail": "Hotels.com public property text lists blackout curtains for Little Bucharest downtown apartments.",
+        "source": "booking_snapshot"
+      }
+    },
+    "transit_accessibility_evidence": {
+      "status": "confirmed",
+      "detail": "Coordinates place the property within central Bucharest; public hotel pages describe it as near Piata Romana and close to Piata Romana tube/metro station.",
+      "source": "Booking.com connector location and public location text"
+    },
+    "confidence_score": 0.91,
+    "value_score": 86.23,
+    "source_metadata": {
+      "fetched_at": "2026-07-05",
+      "source_tool": "Booking.com connector accommodations_search_v2 plus property QA",
+      "pricing_note": "Booking.com connector returned live book prices in EUR for one adult, one room. Prices are treated as candidate totals but remain subject to Booking.com checkout confirmation before booking.",
+      "evidence_urls": [
+        "https://www.booking.com/hotel/ro/little-bucharest-downtown-apartments.html",
+        "https://in.hotels.com/ho3677045184/little-bucharest-downtown-apartments/",
+        "https://www.bucharest-romania-hotels.com/en/property/little-downtown-apartments.html"
+      ]
+    },
+    "score_breakdown": {
+      "price": 0.7437777777777778,
+      "rating": 0.8049999999999998,
+      "review_confidence": 1,
+      "amenity_match": 1,
+      "transit": 1,
+      "stay_length": 1,
+      "cancellation": 0.45,
+      "source_reliability": 0.84,
+      "amenity_uncertainty_penalty": 0,
+      "unclear_fee_penalty": 0,
+      "risk_penalty": 0,
+      "penalties": 0,
+      "total": 86.23,
+      "confidence": 0.91
+    },
+    "why": [
+      "Nightly price is above the preferred band but inside the hard cap.",
+      "Accepted as a candidate because hard filters passed; confidence still depends on evidence quality."
+    ],
+    "manual_verification": [
+      "Check cancellation terms still match: Not verified by connector snapshot."
+    ]
+  },
+  {
+    "accepted": true,
+    "is_new": true,
+    "city": "Poznan",
+    "neighborhood": "Poznan City Center",
+    "source": "booking_snapshot",
+    "listing_name": "Stay99 Apart",
+    "url": "https://www.booking.com/hotel/pl/stay99-aparthotel-wodna.html?aid=2438770&checkin=2026-11-09&checkout=2026-11-11&no_rooms=1&group_adults=1&selected_currency=EUR",
+    "dates_tested": "2026-11-09 to 2026-11-11",
+    "stay_length": 2,
+    "total_price_eur": 85.95,
+    "nightly_equivalent_eur": 42.975,
+    "rating": 8.5,
+    "rating_scale": 10,
+    "review_count": 1172,
+    "amenity_evidence": {
+      "adjustable_climate_control": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the apartments feature individually adjustable air conditioning.",
+        "source": "booking_snapshot"
+      },
+      "kitchen_or_kitchenette": {
+        "status": "confirmed",
+        "detail": "Booking property QA says each private unit includes a kitchenette.",
+        "source": "booking_snapshot"
+      },
+      "stovetop": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the kitchenette includes a stovetop.",
+        "source": "booking_snapshot"
+      },
+      "utensils": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the kitchenette includes kitchenware, dishes, and cutlery.",
+        "source": "booking_snapshot"
+      },
+      "blackout_window_covering": {
+        "status": "missing",
+        "detail": "Booking property QA says no blackout curtains or window coverings are specifically mentioned; Booking review evidence says skylight/curtains did not block light.",
+        "source": "booking_snapshot"
+      }
+    },
+    "transit_accessibility_evidence": {
+      "status": "confirmed",
+      "detail": "Coordinates place the property in central Poznan near Old Town and tram-served streets.",
+      "source": "Booking.com connector location"
+    },
+    "confidence_score": 0.85,
+    "value_score": 80.28,
+    "source_metadata": {
+      "fetched_at": "2026-07-05",
+      "source_tool": "Booking.com connector accommodations_search_v2 plus property QA",
+      "pricing_note": "Booking.com connector returned live book prices in EUR for one adult, one room. Prices are treated as candidate totals but remain subject to Booking.com checkout confirmation before booking.",
+      "evidence_urls": [
+        "https://www.booking.com/hotel/pl/stay99-aparthotel-wodna.html",
+        "https://www.booking.com/reviews/pl/hotel/stay99-aparthotel-wodna.en-gb.html"
+      ]
+    },
+    "score_breakdown": {
+      "price": 0.8227777777777777,
+      "rating": 0.7749999999999999,
+      "review_confidence": 1,
+      "amenity_match": 0.82,
+      "transit": 1,
+      "stay_length": 1,
+      "cancellation": 0.45,
+      "source_reliability": 0.82,
+      "amenity_uncertainty_penalty": 0.04,
+      "unclear_fee_penalty": 0,
+      "risk_penalty": 0,
+      "penalties": 0.04,
+      "total": 80.28,
+      "confidence": 0.85
+    },
+    "why": [
+      "Nightly price is above the preferred band but inside the hard cap.",
+      "blackout window covering needs manual check.",
+      "Accepted as a candidate because hard filters passed; confidence still depends on evidence quality."
+    ],
+    "manual_verification": [
+      "Check blackout window covering: Booking property QA says no blackout curtains or window coverings are specifically mentioned; Booking review evidence says skylight/curtains did not block light.",
+      "Check cancellation terms still match: Not verified by connector snapshot."
+    ]
+  },
+  {
+    "accepted": true,
+    "is_new": true,
+    "city": "Budapest",
+    "neighborhood": "Terezvaros",
+    "source": "booking_snapshot",
+    "listing_name": "LH Gallery Apartments",
+    "url": "https://www.booking.com/hotel/hu/lh-gallery-downtown-apartments.html?aid=2438770&checkin=2026-11-09&checkout=2026-11-11&no_rooms=1&group_adults=1&selected_currency=EUR",
+    "dates_tested": "2026-11-09 to 2026-11-11",
+    "stay_length": 2,
+    "total_price_eur": 97.21,
+    "nightly_equivalent_eur": 48.605,
+    "rating": 8.3,
+    "rating_scale": 10,
+    "review_count": 1142,
+    "amenity_evidence": {
+      "adjustable_climate_control": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the apartments feature air conditioning.",
+        "source": "booking_snapshot"
+      },
+      "kitchen_or_kitchenette": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the apartments include a kitchenette.",
+        "source": "booking_snapshot"
+      },
+      "stovetop": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the kitchenette comes with a stovetop.",
+        "source": "booking_snapshot"
+      },
+      "utensils": {
+        "status": "confirmed",
+        "detail": "Booking property QA says kitchenware is included.",
+        "source": "booking_snapshot"
+      },
+      "blackout_window_covering": {
+        "status": "ambiguous",
+        "detail": "Booking property QA says reviews mention almost blackout window shades, but blackout shades are not explicitly stated in the general property information.",
+        "source": "booking_snapshot"
+      }
+    },
+    "transit_accessibility_evidence": {
+      "status": "confirmed",
+      "detail": "Coordinates place the property within the configured central Budapest radius; third-party page text places Varosliget underground station about 250 m away.",
+      "source": "Booking.com connector location and public location text"
+    },
+    "confidence_score": 0.87,
+    "value_score": 79.11,
+    "source_metadata": {
+      "fetched_at": "2026-07-05",
+      "source_tool": "Booking.com connector accommodations_search_v2 plus property QA",
+      "pricing_note": "Booking.com connector returned live book prices in EUR for one adult, one room. Prices are treated as candidate totals but remain subject to Booking.com checkout confirmation before booking.",
+      "evidence_urls": [
+        "https://www.booking.com/hotel/hu/lh-gallery-downtown-apartments.html",
+        "https://lh-gallery-apartments.inbudapesthotels.com/en/"
+      ]
+    },
+    "score_breakdown": {
+      "price": 0.6976666666666667,
+      "rating": 0.7450000000000001,
+      "review_confidence": 1,
+      "amenity_match": 0.883,
+      "transit": 1,
+      "stay_length": 1,
+      "cancellation": 0.45,
+      "source_reliability": 0.82,
+      "amenity_uncertainty_penalty": 0.025,
+      "unclear_fee_penalty": 0,
+      "risk_penalty": 0,
+      "penalties": 0.025,
+      "total": 79.11,
+      "confidence": 0.87
+    },
+    "why": [
+      "Nightly price is above the preferred band but inside the hard cap.",
+      "blackout window covering is ambiguous; check manually.",
+      "Accepted as a candidate because hard filters passed; confidence still depends on evidence quality."
+    ],
+    "manual_verification": [
+      "Check blackout window covering: Booking property QA says reviews mention almost blackout window shades, but blackout shades are not explicitly stated in the general property information.",
+      "Check cancellation terms still match: Not verified by connector snapshot."
+    ]
+  },
+  {
+    "accepted": true,
+    "is_new": true,
+    "city": "Sofia",
+    "neighborhood": "Centrum",
+    "source": "booking_snapshot",
+    "listing_name": "Cozy apartment in downtown Sofia - Tsar Samuil Street",
+    "url": "https://www.booking.com/hotel/bg/apartment-tsar-samuil.html?aid=2438770&checkin=2026-11-09&checkout=2026-11-11&no_rooms=1&group_adults=1&selected_currency=EUR",
+    "dates_tested": "2026-11-09 to 2026-11-11",
+    "stay_length": 2,
+    "total_price_eur": 98.38,
+    "nightly_equivalent_eur": 49.19,
+    "rating": 9.7,
+    "rating_scale": 10,
+    "review_count": 154,
+    "amenity_evidence": {
+      "adjustable_climate_control": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the apartment features air conditioning and heating.",
+        "source": "booking_snapshot"
+      },
+      "kitchen_or_kitchenette": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the apartment includes a well-fitted kitchen.",
+        "source": "booking_snapshot"
+      },
+      "stovetop": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the kitchen features a stovetop.",
+        "source": "booking_snapshot"
+      },
+      "utensils": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the kitchen includes kitchenware.",
+        "source": "booking_snapshot"
+      },
+      "blackout_window_covering": {
+        "status": "missing",
+        "detail": "Booking property QA says blackout curtains, shades, or shutters are not directly stated.",
+        "source": "booking_snapshot"
+      }
+    },
+    "transit_accessibility_evidence": {
+      "status": "confirmed",
+      "detail": "Coordinates place the property in central Sofia near public transport-served streets.",
+      "source": "Booking.com connector location"
+    },
+    "confidence_score": 0.85,
+    "value_score": 78.93,
+    "source_metadata": {
+      "fetched_at": "2026-07-05",
+      "source_tool": "Booking.com connector accommodations_search_v2 plus property QA",
+      "pricing_note": "Booking.com connector returned live book prices in EUR for one adult, one room. Prices are treated as candidate totals but remain subject to Booking.com checkout confirmation before booking.",
+      "evidence_urls": [
+        "https://www.booking.com/hotel/bg/apartment-tsar-samuil.html"
+      ]
+    },
+    "score_breakdown": {
+      "price": 0.6846666666666668,
+      "rating": 0.9549999999999998,
+      "review_confidence": 1,
+      "amenity_match": 0.82,
+      "transit": 1,
+      "stay_length": 1,
+      "cancellation": 0.45,
+      "source_reliability": 0.82,
+      "amenity_uncertainty_penalty": 0.04,
+      "unclear_fee_penalty": 0,
+      "risk_penalty": 0,
+      "penalties": 0.04,
+      "total": 78.93,
+      "confidence": 0.85
+    },
+    "why": [
+      "Nightly price is above the preferred band but inside the hard cap.",
+      "blackout window covering needs manual check.",
+      "Accepted as a candidate because hard filters passed; confidence still depends on evidence quality."
+    ],
+    "manual_verification": [
+      "Check blackout window covering: Booking property QA says blackout curtains, shades, or shutters are not directly stated.",
+      "Check cancellation terms still match: Not verified by connector snapshot."
+    ]
+  },
+  {
+    "accepted": true,
+    "is_new": true,
+    "city": "Rzeszow",
+    "neighborhood": "Central Rzeszow",
+    "source": "booking_snapshot",
+    "listing_name": "IK Apartamenty",
+    "url": "https://www.booking.com/hotel/pl/ik-apartamenty.html?aid=2438770&checkin=2026-11-09&checkout=2026-11-11&no_rooms=1&group_adults=1&selected_currency=EUR",
+    "dates_tested": "2026-11-09 to 2026-11-11",
+    "stay_length": 2,
+    "total_price_eur": 91.22,
+    "nightly_equivalent_eur": 45.61,
+    "rating": 8.4,
+    "rating_scale": 10,
+    "review_count": 93,
+    "amenity_evidence": {
+      "adjustable_climate_control": {
+        "status": "confirmed",
+        "detail": "Booking property QA says apartments feature air conditioning that can be adjusted by guests.",
+        "source": "booking_snapshot"
+      },
+      "kitchen_or_kitchenette": {
+        "status": "confirmed",
+        "detail": "Booking property QA confirms a kitchenette.",
+        "source": "booking_snapshot"
+      },
+      "stovetop": {
+        "status": "confirmed",
+        "detail": "Booking property QA confirms a stovetop.",
+        "source": "booking_snapshot"
+      },
+      "utensils": {
+        "status": "confirmed",
+        "detail": "Booking property QA confirms kitchenware/utensils.",
+        "source": "booking_snapshot"
+      },
+      "blackout_window_covering": {
+        "status": "missing",
+        "detail": "Booking property QA says blackout curtains or shutters are not mentioned.",
+        "source": "booking_snapshot"
+      }
+    },
+    "transit_accessibility_evidence": {
+      "status": "confirmed",
+      "detail": "Coordinates place the property in central Rzeszow near rail/bus-served streets.",
+      "source": "Booking.com connector location"
+    },
+    "confidence_score": 0.84,
+    "value_score": 77.73,
+    "source_metadata": {
+      "fetched_at": "2026-07-05",
+      "source_tool": "Booking.com connector accommodations_search_v2 plus property QA",
+      "pricing_note": "Booking.com connector returned live book prices in EUR for one adult, one room. Prices are treated as candidate totals but remain subject to Booking.com checkout confirmation before booking.",
+      "evidence_urls": [
+        "https://www.booking.com/hotel/pl/ik-apartamenty.html"
+      ]
+    },
+    "score_breakdown": {
+      "price": 0.7642222222222222,
+      "rating": 0.76,
+      "review_confidence": 0.93,
+      "amenity_match": 0.82,
+      "transit": 1,
+      "stay_length": 1,
+      "cancellation": 0.45,
+      "source_reliability": 0.82,
+      "amenity_uncertainty_penalty": 0.04,
+      "unclear_fee_penalty": 0,
+      "risk_penalty": 0,
+      "penalties": 0.04,
+      "total": 77.73,
+      "confidence": 0.84
+    },
+    "why": [
+      "Nightly price is above the preferred band but inside the hard cap.",
+      "blackout window covering needs manual check.",
+      "Accepted as a candidate because hard filters passed; confidence still depends on evidence quality."
+    ],
+    "manual_verification": [
+      "Check blackout window covering: Booking property QA says blackout curtains or shutters are not mentioned.",
+      "Check cancellation terms still match: Not verified by connector snapshot."
+    ]
+  },
+  {
+    "accepted": true,
+    "is_new": true,
+    "city": "Bucharest",
+    "neighborhood": "Sector 1 / Piata Romana",
+    "source": "websearch_cli",
+    "listing_name": "Little Bucharest downtown apartments Romana",
+    "url": "https://in.hotels.com/ho3677045184/little-bucharest-downtown-apartments/",
+    "dates_tested": "2026-11-09 to 2026-11-11",
+    "stay_length": 2,
+    "total_price_eur": 93.06,
+    "nightly_equivalent_eur": 46.53,
+    "rating": 8.7,
+    "rating_scale": 10,
+    "review_count": 459,
+    "amenity_evidence": {
+      "adjustable_climate_control": {
+        "status": "confirmed",
+        "detail": "Cross-source Booking property QA says the apartments include air conditioning and private heating.",
+        "source": "websearch_cli"
+      },
+      "kitchen_or_kitchenette": {
+        "status": "confirmed",
+        "detail": "Hotels.com public text lists kitchen/kitchenette-style amenities for this apartment property.",
+        "source": "websearch_cli"
+      },
+      "stovetop": {
+        "status": "confirmed",
+        "detail": "Hotels.com public text lists stovetop.",
+        "source": "websearch_cli"
+      },
+      "utensils": {
+        "status": "confirmed",
+        "detail": "Hotels.com public text lists cookware/dishes/utensils.",
+        "source": "websearch_cli"
+      },
+      "blackout_window_covering": {
+        "status": "confirmed",
+        "detail": "Hotels.com public property text lists blackout curtains.",
+        "source": "websearch_cli"
+      }
+    },
+    "transit_accessibility_evidence": {
+      "status": "confirmed",
+      "detail": "Public hotel-page text places the property near Piata Romana tube/metro station.",
+      "source": "websearch_cli seed cache"
+    },
+    "confidence_score": 0.89,
+    "value_score": 77.39,
+    "source_metadata": {
+      "fetched_at": "2026-07-30",
+      "source_tool": "codex exec websearch CLI",
+      "pricing_note": "Preliminary price from web search/OTA result; verify checkout total before booking.",
+      "evidence_urls": [
+        "https://in.hotels.com/ho3677045184/little-bucharest-downtown-apartments/",
+        "https://www.bucharest-romania-hotels.com/en/property/little-downtown-apartments.html"
+      ]
+    },
+    "score_breakdown": {
+      "price": 0.7437777777777778,
+      "rating": 0.8049999999999998,
+      "review_confidence": 1,
+      "amenity_match": 1,
+      "transit": 1,
+      "stay_length": 1,
+      "cancellation": 0.45,
+      "source_reliability": 0.72,
+      "amenity_uncertainty_penalty": 0,
+      "unclear_fee_penalty": 0.08,
+      "risk_penalty": 0,
+      "penalties": 0.08,
+      "total": 77.39,
+      "confidence": 0.89
+    },
+    "why": [
+      "Nightly price is above the preferred band but inside the hard cap.",
+      "Displayed price is preliminary; taxes, city taxes, cleaning fees, or service fees may still change the checkout total.",
+      "Accepted as a candidate because hard filters passed; confidence still depends on evidence quality."
+    ],
+    "manual_verification": [
+      "Check cancellation terms still match: Not verified by websearch CLI.",
+      "Verify whether taxes, cleaning fees, service fees, and city taxes are included in the total."
+    ]
+  },
+  {
+    "accepted": true,
+    "is_new": true,
+    "city": "Sofia",
+    "neighborhood": "Central Sofia",
+    "source": "booking_snapshot",
+    "listing_name": "АРТ СТУДИО СОФИЯ",
+    "url": "https://www.booking.com/hotel/bg/art-studio-sofiia.html?aid=2438770&checkin=2026-11-09&checkout=2026-11-11&no_rooms=1&group_adults=1&selected_currency=EUR",
+    "dates_tested": "2026-11-09 to 2026-11-11",
+    "stay_length": 2,
+    "total_price_eur": 93.54,
+    "nightly_equivalent_eur": 46.77,
+    "rating": 8.2,
+    "rating_scale": 10,
+    "review_count": 810,
+    "amenity_evidence": {
+      "adjustable_climate_control": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the units include air conditioning and heating.",
+        "source": "booking_snapshot"
+      },
+      "kitchen_or_kitchenette": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the units come with a kitchenette.",
+        "source": "booking_snapshot"
+      },
+      "stovetop": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the kitchenette includes a stovetop.",
+        "source": "booking_snapshot"
+      },
+      "utensils": {
+        "status": "confirmed",
+        "detail": "Booking property QA says kitchenware is provided in the kitchenette.",
+        "source": "booking_snapshot"
+      },
+      "blackout_window_covering": {
+        "status": "missing",
+        "detail": "Booking property QA says blackout curtains, shades, or shutters are not directly stated.",
+        "source": "booking_snapshot"
+      }
+    },
+    "transit_accessibility_evidence": {
+      "status": "confirmed",
+      "detail": "Coordinates place the property close enough to central Sofia; location text also references metro/tram/bus access.",
+      "source": "Booking.com connector location"
+    },
+    "confidence_score": 0.85,
+    "value_score": 77.29,
+    "source_metadata": {
+      "fetched_at": "2026-07-05",
+      "source_tool": "Booking.com connector accommodations_search_v2 plus property QA",
+      "pricing_note": "Booking.com connector returned live book prices in EUR for one adult, one room. Prices are treated as candidate totals but remain subject to Booking.com checkout confirmation before booking.",
+      "evidence_urls": [
+        "https://www.booking.com/hotel/bg/art-studio-sofiia.html"
+      ]
+    },
+    "score_breakdown": {
+      "price": 0.7384444444444443,
+      "rating": 0.7299999999999999,
+      "review_confidence": 1,
+      "amenity_match": 0.82,
+      "transit": 1,
+      "stay_length": 1,
+      "cancellation": 0.45,
+      "source_reliability": 0.82,
+      "amenity_uncertainty_penalty": 0.04,
+      "unclear_fee_penalty": 0,
+      "risk_penalty": 0,
+      "penalties": 0.04,
+      "total": 77.29,
+      "confidence": 0.85
+    },
+    "why": [
+      "Nightly price is above the preferred band but inside the hard cap.",
+      "blackout window covering needs manual check.",
+      "Accepted as a candidate because hard filters passed; confidence still depends on evidence quality."
+    ],
+    "manual_verification": [
+      "Check blackout window covering: Booking property QA says blackout curtains, shades, or shutters are not directly stated.",
+      "Check cancellation terms still match: Not verified by connector snapshot."
+    ]
+  },
+  {
+    "accepted": true,
+    "is_new": true,
+    "city": "Lisbon",
+    "neighborhood": "Santo Antonio",
+    "source": "booking_snapshot",
+    "listing_name": "Morgan-Jupiter Apartments",
+    "url": "https://www.booking.com/hotel/pt/morgan-jupiter-apartments-lisboa.html?aid=2438770&checkin=2026-12-07&checkout=2026-12-09&no_rooms=1&group_adults=1&selected_currency=EUR",
+    "dates_tested": "2026-12-07 to 2026-12-09",
+    "stay_length": 2,
+    "total_price_eur": 139.81,
+    "nightly_equivalent_eur": 69.905,
+    "rating": 8.4,
+    "rating_scale": 10,
+    "review_count": 2891,
+    "amenity_evidence": {
+      "adjustable_climate_control": {
+        "status": "confirmed",
+        "detail": "Booking property QA says apartments have individually adjustable air conditioning and heating.",
+        "source": "booking_snapshot"
+      },
+      "kitchen_or_kitchenette": {
+        "status": "confirmed",
+        "detail": "Booking property QA says units include a kitchenette.",
+        "source": "booking_snapshot"
+      },
+      "stovetop": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the kitchenette is equipped with a stovetop.",
+        "source": "booking_snapshot"
+      },
+      "utensils": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the kitchenette includes kitchenware and essential cooking items.",
+        "source": "booking_snapshot"
+      },
+      "blackout_window_covering": {
+        "status": "confirmed",
+        "detail": "Public Booking page search result text says plush bedding and blackout curtains are provided.",
+        "source": "booking_snapshot"
+      }
+    },
+    "transit_accessibility_evidence": {
+      "status": "confirmed",
+      "detail": "Coordinates place the property in central Lisbon near Avenida and metro-served corridors.",
+      "source": "Booking.com connector location"
+    },
+    "confidence_score": 0.91,
+    "value_score": 54.95,
+    "source_metadata": {
+      "fetched_at": "2026-07-05",
+      "source_tool": "Booking.com connector accommodations_search_v2 plus property QA",
+      "pricing_note": "Booking.com connector returned live book prices in EUR for one adult, one room. Prices are treated as candidate totals but remain subject to Booking.com checkout confirmation before booking.",
+      "evidence_urls": [
+        "https://www.booking.com/hotel/pt/morgan-jupiter-apartments-lisboa.html"
+      ]
+    },
+    "score_breakdown": {
+      "price": 0.22433333333333327,
+      "rating": 0.76,
+      "review_confidence": 1,
+      "amenity_match": 1,
+      "transit": 1,
+      "stay_length": 1,
+      "cancellation": 0.45,
+      "source_reliability": 0.82,
+      "amenity_uncertainty_penalty": 0,
+      "unclear_fee_penalty": 0,
+      "risk_penalty": 0.16,
+      "penalties": 0.16,
+      "total": 54.95,
+      "confidence": 0.91
+    },
+    "why": [
+      "Nightly price is in the expanded EUR 50-80 band; score penalty applied.",
+      "Accepted as a candidate because hard filters passed; confidence still depends on evidence quality."
+    ],
+    "manual_verification": [
+      "Check cancellation terms still match: Not verified by connector snapshot."
+    ]
+  },
+  {
+    "accepted": false,
+    "is_new": true,
+    "city": "Krakow",
+    "neighborhood": "Old Town",
+    "source": "booking_snapshot",
+    "listing_name": "Queen Bee Apartments Krakow Old Town",
+    "url": "https://www.booking.com/hotel/pl/queen-bee-apartments-krakow-old-town.html?aid=2438770&checkin=2026-11-09&checkout=2026-11-11&no_rooms=1&group_adults=1&selected_currency=EUR",
+    "dates_tested": "2026-11-09 to 2026-11-11",
+    "stay_length": 2,
+    "total_price_eur": 77.75,
+    "nightly_equivalent_eur": 38.875,
+    "rating": 9.1,
+    "rating_scale": 10,
+    "review_count": 130,
+    "amenity_evidence": {
+      "adjustable_climate_control": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the apartment features air conditioning that is individually adjustable for guest accommodation.",
+        "source": "booking_snapshot"
+      },
+      "kitchen_or_kitchenette": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the One-Bedroom Apartment includes a fully fitted kitchen.",
+        "source": "booking_snapshot"
+      },
+      "stovetop": {
+        "status": "missing",
+        "detail": "Booking property QA says the presence of a stovetop or hob is not specified.",
+        "source": "booking_snapshot"
+      },
+      "utensils": {
+        "status": "inferred",
+        "detail": "Booking property QA says a fully fitted kitchen typically provides basic cookware, dishes, cutlery, and utensils, but this is not stated as direct property evidence.",
+        "source": "booking_snapshot"
+      },
+      "blackout_window_covering": {
+        "status": "missing",
+        "detail": "Booking property QA says blackout curtains, shades, or shutters are not mentioned.",
+        "source": "booking_snapshot"
+      }
+    },
+    "transit_accessibility_evidence": {
+      "status": "confirmed",
+      "detail": "Coordinates are inside central Krakow and the address is in Old Town near tram-served streets.",
+      "source": "Booking.com connector location"
+    },
+    "confidence_score": 0.76,
+    "value_score": 73.54,
+    "source_metadata": {
+      "fetched_at": "2026-07-05",
+      "source_tool": "Booking.com connector accommodations_search_v2 plus property QA",
+      "pricing_note": "Booking.com connector returned live book prices in EUR for one adult, one room. Prices are treated as candidate totals but remain subject to Booking.com checkout confirmation before booking.",
+      "evidence_urls": [
+        "https://www.booking.com/hotel/pl/queen-bee-apartments-krakow-old-town.html"
+      ]
+    },
+    "score_breakdown": {
+      "price": 0.9138888888888889,
+      "rating": 0.8649999999999999,
+      "review_confidence": 1,
+      "amenity_match": 0.5675,
+      "transit": 1,
+      "stay_length": 1,
+      "cancellation": 0.45,
+      "source_reliability": 0.82,
+      "amenity_uncertainty_penalty": 0.095,
+      "unclear_fee_penalty": 0,
+      "risk_penalty": 0,
+      "penalties": 0.095,
+      "total": 73.54,
+      "confidence": 0.76
+    },
+    "why": [
+      "Nightly price is above the preferred band but inside the hard cap.",
+      "stovetop is not evidenced.",
+      "utensils is inferred; direct confirmation is required.",
+      "blackout window covering needs manual check."
+    ],
+    "manual_verification": [
+      "Verify utensils: Booking property QA says a fully fitted kitchen typically provides basic cookware, dishes, cutlery, and utensils, but this is not stated as direct property evidence.",
+      "Check blackout window covering: Booking property QA says blackout curtains, shades, or shutters are not mentioned.",
+      "Check cancellation terms still match: Not verified by connector snapshot."
+    ]
+  },
+  {
+    "accepted": false,
+    "is_new": true,
+    "city": "Krakow",
+    "neighborhood": "Kraków City Centre / Kazimierz",
+    "source": "apartment_candidate_snapshot",
+    "listing_name": "Happy Tower Kraków",
+    "url": "https://www.hotels.com/ho576806/happy-tower-krakow-krakow-poland/",
+    "dates_tested": "2026-07-19 to 2026-07-20",
+    "stay_length": 1,
+    "total_price_eur": 45,
+    "nightly_equivalent_eur": 45,
+    "rating": 8.4,
+    "rating_scale": 10,
+    "review_count": 257,
+    "amenity_evidence": {
+      "adjustable_climate_control": {
+        "status": "ambiguous",
+        "detail": "Hotels.com/Expedia pages list air conditioning, but do not prove individual guest-adjustable controls.",
+        "source": "apartment_candidate_snapshot"
+      },
+      "kitchen_or_kitchenette": {
+        "status": "confirmed",
+        "detail": "Hotels.com image/room label states private kitchenette.",
+        "source": "apartment_candidate_snapshot"
+      },
+      "stovetop": {
+        "status": "confirmed",
+        "detail": "Hotels.com image/room label states stovetop.",
+        "source": "apartment_candidate_snapshot"
+      },
+      "utensils": {
+        "status": "confirmed",
+        "detail": "Hotels.com image/room label states cookware/dishes/utensils.",
+        "source": "apartment_candidate_snapshot"
+      },
+      "blackout_window_covering": {
+        "status": "confirmed",
+        "detail": "Hotels.com image/room label states blackout drapes.",
+        "source": "apartment_candidate_snapshot"
+      }
+    },
+    "transit_accessibility_evidence": {
+      "status": "confirmed",
+      "detail": "Public pages place the property in Kraków City Centre/Kazimierz; On The Beach says Starowiślna tram stop is a few steps away and Kraków Grzegórzki train station is nearby.",
+      "source": "public accommodation pages"
+    },
+    "confidence_score": 0.84,
+    "value_score": 66.23,
+    "source_metadata": {
+      "fetched_at": "2026-07-05",
+      "source_tool": "Hotels.com/Expedia public pages via web search",
+      "pricing_note": "Public Hotels.com/Expedia pages exposed nightly/1-night prices and amenity evidence. Exact 2-6 night totals must be rechecked before booking.",
+      "evidence_urls": [
+        "https://www.hotels.com/ho576806/happy-tower-krakow-krakow-poland/",
+        "https://www.expedia.com/Krakow-Hotels-Happy-Tower-Krakow.h14711208.Hotel-Information",
+        "https://www.onthebeach.co.uk/hotels/poland/krakow/happy-tower-krakow"
+      ]
+    },
+    "score_breakdown": {
+      "price": 0.7777777777777778,
+      "rating": 0.76,
+      "review_confidence": 1,
+      "amenity_match": 0.8440000000000001,
+      "transit": 1,
+      "stay_length": 0,
+      "cancellation": 0.45,
+      "source_reliability": 0.74,
+      "amenity_uncertainty_penalty": 0.025,
+      "unclear_fee_penalty": 0.08,
+      "risk_penalty": 0,
+      "penalties": 0.105,
+      "total": 66.23,
+      "confidence": 0.84
+    },
+    "why": [
+      "Nightly price is above the preferred band but inside the hard cap.",
+      "Stay length 1 nights is outside the configured 2-6 night range.",
+      "Displayed price is preliminary; taxes, city taxes, cleaning fees, or service fees may still change the checkout total.",
+      "adjustable climate control is ambiguous; direct confirmation is required."
+    ],
+    "manual_verification": [
+      "Verify adjustable climate control: Hotels.com/Expedia pages list air conditioning, but do not prove individual guest-adjustable controls.",
+      "Check cancellation terms still match: Not verified in accessible page snapshot.",
+      "Verify whether taxes, cleaning fees, service fees, and city taxes are included in the total."
+    ]
+  },
+  {
+    "accepted": false,
+    "is_new": true,
+    "city": "Krakow",
+    "neighborhood": "Kleparz",
+    "source": "booking_snapshot",
+    "listing_name": "Cracow Central Aparthotel",
+    "url": "https://www.booking.com/hotel/pl/cracow-central-guest-rooms.html?aid=2438770&checkin=2026-11-09&checkout=2026-11-11&no_rooms=1&group_adults=1&selected_currency=EUR",
+    "dates_tested": "2026-11-09 to 2026-11-11",
+    "stay_length": 2,
+    "total_price_eur": 85.35,
+    "nightly_equivalent_eur": 42.675,
+    "rating": 8.5,
+    "rating_scale": 10,
+    "review_count": 9999,
+    "amenity_evidence": {
+      "adjustable_climate_control": {
+        "status": "confirmed",
+        "detail": "Booking property QA says the units feature individually adjustable air conditioning.",
+        "source": "booking_snapshot"
+      },
+      "kitchen_or_kitchenette": {
+        "status": "missing",
+        "detail": "Booking property QA says available units do not include kitchenettes.",
+        "source": "booking_snapshot"
+      },
+      "stovetop": {
+        "status": "missing",
+        "detail": "Booking property QA says available units do not include a private kitchen or stovetop.",
+        "source": "booking_snapshot"
+      },
+      "utensils": {
+        "status": "missing",
+        "detail": "Booking property QA says available units do not include private kitchen cookware, dishes, cutlery, and utensils.",
+        "source": "booking_snapshot"
+      },
+      "blackout_window_covering": {
+        "status": "missing",
+        "detail": "Booking property QA says blackout curtains or similar coverings are not specified.",
+        "source": "booking_snapshot"
+      }
+    },
+    "transit_accessibility_evidence": {
+      "status": "confirmed",
+      "detail": "Coordinates are inside central Krakow and the address is near the main station area.",
+      "source": "Booking.com connector location"
+    },
+    "confidence_score": 0.65,
+    "value_score": 56.86,
+    "source_metadata": {
+      "fetched_at": "2026-07-05",
+      "source_tool": "Booking.com connector accommodations_search_v2 plus property QA",
+      "pricing_note": "Booking.com connector returned live book prices in EUR for one adult, one room. Prices are treated as candidate totals but remain subject to Booking.com checkout confirmation before booking.",
+      "evidence_urls": [
+        "https://www.booking.com/hotel/pl/cracow-central-guest-rooms.html"
+      ]
+    },
+    "score_breakdown": {
+      "price": 0.8294444444444445,
+      "rating": 0.7749999999999999,
+      "review_confidence": 1,
+      "amenity_match": 0.24,
+      "transit": 1,
+      "stay_length": 1,
+      "cancellation": 0.45,
+      "source_reliability": 0.82,
+      "amenity_uncertainty_penalty": 0.16,
+      "unclear_fee_penalty": 0,
+      "risk_penalty": 0,
+      "penalties": 0.16,
+      "total": 56.86,
+      "confidence": 0.65
+    },
+    "why": [
+      "Nightly price is above the preferred band but inside the hard cap.",
+      "kitchen or kitchenette is not evidenced.",
+      "stovetop is not evidenced.",
+      "utensils is not evidenced.",
+      "blackout window covering needs manual check."
+    ],
+    "manual_verification": [
+      "Check blackout window covering: Booking property QA says blackout curtains or similar coverings are not specified.",
+      "Check cancellation terms still match: Not verified by connector snapshot."
+    ]
+  },
+  {
+    "accepted": false,
+    "is_new": true,
+    "city": "Warsaw",
+    "neighborhood": "West Station / Ochota",
+    "source": "accor_snapshot",
+    "listing_name": "ibis budget Warszawa West Station",
+    "url": "https://all.accor.com/hotel/7148/index.en.shtml",
+    "dates_tested": "2026-12-06 to 2026-12-08",
+    "stay_length": 2,
+    "total_price_eur": 90,
+    "nightly_equivalent_eur": 45,
+    "rating": 4.3,
+    "rating_scale": 5,
+    "review_count": 1265,
+    "amenity_evidence": {
+      "adjustable_climate_control": {
+        "status": "ambiguous",
+        "detail": "Official Accor page states air-conditioned rooms, but does not prove guest-adjustable individual controls.",
+        "source": "accor_snapshot"
+      },
+      "kitchen_or_kitchenette": {
+        "status": "missing",
+        "detail": "Official Accor page does not list a kitchen or kitchenette.",
+        "source": "accor_snapshot"
+      },
+      "stovetop": {
+        "status": "missing",
+        "detail": "Official Accor page does not list a stovetop.",
+        "source": "accor_snapshot"
+      },
+      "utensils": {
+        "status": "missing",
+        "detail": "Official Accor page does not list cooking utensils.",
+        "source": "accor_snapshot"
+      },
+      "blackout_window_covering": {
+        "status": "missing",
+        "detail": "Official Accor page does not list blackout curtains, shades, or shutters.",
+        "source": "accor_snapshot"
+      }
+    },
+    "transit_accessibility_evidence": {
+      "status": "confirmed",
+      "detail": "Official Accor page says the hotel is about 700 m from Warszawa Zachodnia station and near public transport stops.",
+      "source": "official Accor property page"
+    },
+    "confidence_score": 0.61,
+    "value_score": 41.59,
+    "source_metadata": {
+      "fetched_at": "2026-07-05",
+      "source_tool": "Accor official live-rate connector",
+      "pricing_note": "Rates are real availability returned by the Accor connector. Pricing context is TOTAL_STAY in EUR, taxes excluded where noted. memberRate requires free ALL Accor membership when present.",
+      "evidence_urls": [
+        "https://all.accor.com/hotel/7148/index.en.shtml"
+      ]
+    },
+    "score_breakdown": {
+      "price": 0.7777777777777778,
+      "rating": 0.5255555555555556,
+      "review_confidence": 1,
+      "amenity_match": 0.08399999999999999,
+      "transit": 1,
+      "stay_length": 1,
+      "cancellation": 0.45,
+      "source_reliability": 0.86,
+      "amenity_uncertainty_penalty": 0.185,
+      "unclear_fee_penalty": 0.05,
+      "risk_penalty": 0,
+      "penalties": 0.235,
+      "total": 41.59,
+      "confidence": 0.61
+    },
+    "why": [
+      "Nightly price is above the preferred band but inside the hard cap.",
+      "Displayed price excludes taxes or mandatory fees; use it as preliminary discovery price only.",
+      "adjustable climate control is ambiguous; direct confirmation is required.",
+      "kitchen or kitchenette is not evidenced.",
+      "stovetop is not evidenced.",
+      "utensils is not evidenced.",
+      "blackout window covering needs manual check."
+    ],
+    "manual_verification": [
+      "Verify adjustable climate control: Official Accor page states air-conditioned rooms, but does not prove guest-adjustable individual controls.",
+      "Check blackout window covering: Official Accor page does not list blackout curtains, shades, or shutters.",
+      "Check cancellation terms still match: Accor page says cancellation is managed via all.accor.com/app/customer service; special terms may apply.",
+      "Verify whether taxes, cleaning fees, service fees, and city taxes are included in the total."
+    ]
+  },
+  {
+    "accepted": false,
+    "is_new": true,
+    "city": "Warsaw",
+    "neighborhood": "Ostrobramska / Praga area",
+    "source": "accor_snapshot",
+    "listing_name": "ibis Warszawa Ostrobramska",
+    "url": "https://all.accor.com/hotel/3129/index.en.shtml",
+    "dates_tested": "2026-10-04 to 2026-10-06",
+    "stay_length": 2,
+    "total_price_eur": 98,
+    "nightly_equivalent_eur": 49,
+    "rating": 4.4,
+    "rating_scale": 5,
+    "review_count": 460,
+    "amenity_evidence": {
+      "adjustable_climate_control": {
+        "status": "ambiguous",
+        "detail": "Official Accor page lists air conditioning, but does not prove guest-adjustable individual controls.",
+        "source": "accor_snapshot"
+      },
+      "kitchen_or_kitchenette": {
+        "status": "missing",
+        "detail": "Official Accor page does not list a kitchen or kitchenette.",
+        "source": "accor_snapshot"
+      },
+      "stovetop": {
+        "status": "missing",
+        "detail": "Official Accor page does not list a stovetop.",
+        "source": "accor_snapshot"
+      },
+      "utensils": {
+        "status": "missing",
+        "detail": "Official Accor page does not list cooking utensils.",
+        "source": "accor_snapshot"
+      },
+      "blackout_window_covering": {
+        "status": "missing",
+        "detail": "Official Accor page does not list blackout curtains, shades, or shutters.",
+        "source": "accor_snapshot"
+      }
+    },
+    "transit_accessibility_evidence": {
+      "status": "confirmed",
+      "detail": "Official Accor page says Ostrobramska bus stop is a 2-minute walk, Grochowska bus stop is a 5-minute walk, and Warszawa Wschodnia railway station is a 15-minute drive.",
+      "source": "official Accor property page"
+    },
+    "confidence_score": 0.61,
+    "value_score": 39.27,
+    "source_metadata": {
+      "fetched_at": "2026-07-05",
+      "source_tool": "Accor official live-rate connector",
+      "pricing_note": "Rates are real availability returned by the Accor connector. Pricing context is TOTAL_STAY in EUR, taxes excluded where noted. memberRate requires free ALL Accor membership when present.",
+      "evidence_urls": [
+        "https://all.accor.com/hotel/3129/index.en.shtml"
+      ]
+    },
+    "score_breakdown": {
+      "price": 0.6888888888888889,
+      "rating": 0.5377777777777779,
+      "review_confidence": 1,
+      "amenity_match": 0.08399999999999999,
+      "transit": 1,
+      "stay_length": 1,
+      "cancellation": 0.45,
+      "source_reliability": 0.86,
+      "amenity_uncertainty_penalty": 0.185,
+      "unclear_fee_penalty": 0.05,
+      "risk_penalty": 0,
+      "penalties": 0.235,
+      "total": 39.27,
+      "confidence": 0.61
+    },
+    "why": [
+      "Nightly price is above the preferred band but inside the hard cap.",
+      "Displayed price excludes taxes or mandatory fees; use it as preliminary discovery price only.",
+      "adjustable climate control is ambiguous; direct confirmation is required.",
+      "kitchen or kitchenette is not evidenced.",
+      "stovetop is not evidenced.",
+      "utensils is not evidenced.",
+      "blackout window covering needs manual check."
+    ],
+    "manual_verification": [
+      "Verify adjustable climate control: Official Accor page lists air conditioning, but does not prove guest-adjustable individual controls.",
+      "Check blackout window covering: Official Accor page does not list blackout curtains, shades, or shutters.",
+      "Check cancellation terms still match: Accor page says cancellation is managed via all.accor.com/app/customer service; special terms may apply.",
+      "Verify whether taxes, cleaning fees, service fees, and city taxes are included in the total."
+    ]
+  }
+]

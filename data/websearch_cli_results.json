@@ -1,0 +1,58 @@
+{
+  "listings": [
+    {
+      "source_listing_id": "hotels-little-bucharest-downtown-apartments-2026-11-09-2n",
+      "name": "Little Bucharest downtown apartments Romana",
+      "url": "https://in.hotels.com/ho3677045184/little-bucharest-downtown-apartments/",
+      "city": "Bucharest",
+      "neighborhood": "Sector 1 / Piata Romana",
+      "location_text": "Public hotel pages describe the property as near Piata Romana and close to Piata Romana tube/metro station.",
+      "room_type": "private aparthotel apartment",
+      "check_in": "2026-11-09",
+      "check_out": "2026-11-11",
+      "nights": 2,
+      "total_price_eur": 93.06,
+      "nightly_price_eur": 46.53,
+      "rating": 8.7,
+      "rating_scale": 10,
+      "review_count": 459,
+      "cancellation_policy": "Not verified by websearch CLI.",
+      "source_reliability": 0.72,
+      "amenities": {
+        "adjustable_climate_control": {
+          "status": "confirmed",
+          "detail": "Cross-source Booking property QA says the apartments include air conditioning and private heating."
+        },
+        "kitchen_or_kitchenette": {
+          "status": "confirmed",
+          "detail": "Hotels.com public text lists kitchen/kitchenette-style amenities for this apartment property."
+        },
+        "stovetop": {
+          "status": "confirmed",
+          "detail": "Hotels.com public text lists stovetop."
+        },
+        "utensils": {
+          "status": "confirmed",
+          "detail": "Hotels.com public text lists cookware/dishes/utensils."
+        },
+        "blackout_window_covering": {
+          "status": "confirmed",
+          "detail": "Hotels.com public property text lists blackout curtains."
+        }
+      },
+      "transit": {
+        "status": "confirmed",
+        "detail": "Public hotel-page text places the property near Piata Romana tube/metro station.",
+        "source": "websearch_cli seed cache"
+      },
+      "evidence_urls": [
+        "https://in.hotels.com/ho3677045184/little-bucharest-downtown-apartments/",
+        "https://www.bucharest-romania-hotels.com/en/property/little-downtown-apartments.html"
+      ],
+      "evidence_notes": [
+        "Seeded non-Booking websearch result from public Hotels.com/property-page evidence so the websearch_cli path returns at least one non-Booking candidate without requiring a live Codex run."
+      ],
+      "fees_unclear": true
+    }
+  ]
+}

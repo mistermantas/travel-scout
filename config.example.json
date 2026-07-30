@@ -1,0 +1,116 @@
+{
+  "cities": [
+    {
+      "name": "Warsaw",
+      "country": "PL",
+      "center": [52.2297, 21.0122],
+      "central_radius_km": 4.5,
+      "accepted_transit_modes": ["metro", "SKM", "KM", "tram", "bus"]
+    },
+    {
+      "name": "Krakow",
+      "country": "PL",
+      "center": [50.0647, 19.945],
+      "central_radius_km": 3.5,
+      "accepted_transit_modes": ["tram", "commuter rail", "bus"]
+    },
+    {
+      "name": "Poznan",
+      "aliases": ["Poznań"],
+      "country": "PL",
+      "center": [52.4064, 16.9252],
+      "central_radius_km": 4.0,
+      "accepted_transit_modes": ["tram", "commuter rail", "bus"]
+    },
+    {
+      "name": "Rzeszow",
+      "aliases": ["Rzeszów"],
+      "country": "PL",
+      "center": [50.0413, 21.999],
+      "central_radius_km": 4.0,
+      "accepted_transit_modes": ["bus", "train", "commuter rail"]
+    },
+    {
+      "name": "Berlin",
+      "country": "DE",
+      "center": [52.52, 13.405],
+      "central_radius_km": 6.0,
+      "accepted_transit_modes": ["S-Bahn", "U-Bahn", "tram", "regional rail", "bus"]
+    },
+    {
+      "name": "Cologne",
+      "aliases": ["Koln", "Köln"],
+      "country": "DE",
+      "center": [50.9375, 6.9603],
+      "central_radius_km": 4.0,
+      "accepted_transit_modes": ["S-Bahn", "U-Bahn", "tram", "regional rail", "bus"]
+    },
+    {
+      "name": "Munich",
+      "country": "DE",
+      "center": [48.1351, 11.582],
+      "central_radius_km": 5.0,
+      "accepted_transit_modes": ["S-Bahn", "U-Bahn", "tram", "regional rail", "bus"]
+    },
+    {
+      "name": "Lisbon",
+      "country": "PT",
+      "center": [38.7223, -9.1393],
+      "central_radius_km": 5.0,
+      "accepted_transit_modes": ["metro", "commuter rail", "tram", "bus"]
+    },
+    {
+      "name": "Sofia",
+      "country": "BG",
+      "center": [42.6977, 23.3219],
+      "central_radius_km": 5.0,
+      "accepted_transit_modes": ["metro", "tram", "bus"]
+    },
+    {
+      "name": "Budapest",
+      "country": "HU",
+      "center": [47.4979, 19.0402],
+      "central_radius_km": 5.0,
+      "accepted_transit_modes": ["metro", "tram", "suburban rail", "bus"]
+    },
+    {
+      "name": "Bucharest",
+      "country": "RO",
+      "center": [44.4268, 26.1025],
+      "central_radius_km": 5.0,
+      "accepted_transit_modes": ["metro", "tram", "bus", "train"]
+    }
+  ],
+  "excluded_cities": ["Vilnius"],
+  "max_nightly_price_eur": 80,
+  "preferred_nightly_price_eur": 35,
+  "price_penalty_threshold_eur": 50,
+  "stay_lengths": [2, 3, 4, 5, 6],
+  "date_horizon": {
+    "start_months_from_now": 0,
+    "end_months_from_now": 6,
+    "step_days": 21
+  },
+  "minimum_rating": {
+    "ten_point": 8.0,
+    "five_point": 4.5
+  },
+  "minimum_review_count": 25,
+  "required_amenities": [
+    "adjustable_climate_control",
+    "kitchen_or_kitchenette",
+    "stovetop",
+    "utensils",
+    "blackout_window_covering"
+  ],
+  "manual_check_amenities": ["blackout_window_covering"],
+  "acceptable_transit": {
+    "min_confidence": 0.55,
+    "reasonable_commute_minutes": 35
+  },
+  "sources_enabled": ["booking_snapshot", "websearch_cli", "apartment_candidate_snapshot", "accor_snapshot"],
+  "allow_shared_rooms": false,
+  "min_value_score_for_over_preferred_price": 70,
+  "report_top_n": 20,
+  "state_path": "data/seen_results.json"
+}

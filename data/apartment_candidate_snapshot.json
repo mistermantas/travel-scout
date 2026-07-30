@@ -1,0 +1,67 @@
+{
+  "fetched_at": "2026-07-05",
+  "source_tool": "Hotels.com/Expedia public pages via web search",
+  "pricing_note": "Public Hotels.com/Expedia pages exposed nightly/1-night prices and amenity evidence. Exact 2-6 night totals must be rechecked before booking.",
+  "listings": [
+    {
+      "source_listing_id": "hotels-happy-tower-krakow-2026-07-19",
+      "name": "Happy Tower Kraków",
+      "url": "https://www.hotels.com/ho576806/happy-tower-krakow-krakow-poland/",
+      "city": "Krakow",
+      "neighborhood": "Kraków City Centre / Kazimierz",
+      "location_text": "Kraków City Centre, near Main Market Square, Royal Road, Planty Park, and Kraków Grzegórzki train station/tram access.",
+      "latitude": 50.0576,
+      "longitude": 19.9447,
+      "room_type": "private aparthotel studio suite",
+      "check_in": "2026-07-19",
+      "check_out": "2026-07-20",
+      "nights": 1,
+      "total_price_eur": 45,
+      "nightly_price_eur": 45,
+      "rating": 8.4,
+      "rating_scale": 10,
+      "review_count": 257,
+      "cancellation_policy": "Not verified in accessible page snapshot.",
+      "source_reliability": 0.74,
+      "pricing_context": {
+        "currency_original": "USD",
+        "price_total_original": 52,
+        "date_original": "2026-07-19 to 2026-07-20",
+        "taxes_and_fees_included": true,
+        "exact_2_to_6_night_total_verified": false
+      },
+      "amenities": {
+        "adjustable_climate_control": {
+          "status": "ambiguous",
+          "detail": "Hotels.com/Expedia pages list air conditioning, but do not prove individual guest-adjustable controls."
+        },
+        "kitchen_or_kitchenette": {
+          "status": "confirmed",
+          "detail": "Hotels.com image/room label states private kitchenette."
+        },
+        "stovetop": {
+          "status": "confirmed",
+          "detail": "Hotels.com image/room label states stovetop."
+        },
+        "utensils": {
+          "status": "confirmed",
+          "detail": "Hotels.com image/room label states cookware/dishes/utensils."
+        },
+        "blackout_window_covering": {
+          "status": "confirmed",
+          "detail": "Hotels.com image/room label states blackout drapes."
+        }
+      },
+      "transit": {
+        "status": "confirmed",
+        "detail": "Public pages place the property in Kraków City Centre/Kazimierz; On The Beach says Starowiślna tram stop is a few steps away and Kraków Grzegórzki train station is nearby.",
+        "source": "public accommodation pages"
+      },
+      "evidence_urls": [
+        "https://www.hotels.com/ho576806/happy-tower-krakow-krakow-poland/",
+        "https://www.expedia.com/Krakow-Hotels-Happy-Tower-Krakow.h14711208.Hotel-Information",
+        "https://www.onthebeach.co.uk/hotels/poland/krakow/happy-tower-krakow"
+      ]
+    }
+  ]
+}

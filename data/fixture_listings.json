@@ -1,0 +1,204 @@
+{
+  "listings": [
+    {
+      "source_listing_id": "fixture-waw-001",
+      "name": "Fixture Warsaw kitchenette studio",
+      "url": "https://example.com/fixture/warsaw-kitchenette-studio",
+      "city": "Warsaw",
+      "neighborhood": "Muranow",
+      "location_text": "Central Warsaw, near tram and metro connections.",
+      "latitude": 52.247,
+      "longitude": 20.998,
+      "room_type": "private apartment",
+      "nightly_price_eur": 32.0,
+      "available_stay_lengths": [2, 3, 4, 5, 6],
+      "rating": 8.8,
+      "rating_scale": 10,
+      "review_count": 87,
+      "cancellation_policy": "Free cancellation until 7 days before arrival",
+      "source_reliability": 0.62,
+      "amenities": {
+        "adjustable_climate_control": {
+          "status": "confirmed",
+          "detail": "Fixture source states individual AC with heating mode."
+        },
+        "kitchen_or_kitchenette": {
+          "status": "confirmed",
+          "detail": "Fixture source states kitchenette."
+        },
+        "stovetop": {
+          "status": "confirmed",
+          "detail": "Fixture source states two-burner stovetop."
+        },
+        "utensils": {
+          "status": "confirmed",
+          "detail": "Fixture source states basic cookware and tableware."
+        },
+        "blackout_window_covering": {
+          "status": "confirmed",
+          "detail": "Fixture source states blackout curtains."
+        }
+      }
+    },
+    {
+      "source_listing_id": "fixture-ber-001",
+      "name": "Fixture Berlin ring studio",
+      "url": "https://example.com/fixture/berlin-ring-studio",
+      "city": "Berlin",
+      "neighborhood": "Wedding",
+      "location_text": "Five minutes from S-Bahn and U-Bahn connections.",
+      "latitude": 52.548,
+      "longitude": 13.36,
+      "room_type": "private studio",
+      "nightly_price_eur": 44.0,
+      "available_stay_lengths": [3, 4, 5],
+      "rating": 4.65,
+      "rating_scale": 5,
+      "review_count": 132,
+      "cancellation_policy": "Partially refundable",
+      "source_reliability": 0.62,
+      "amenities": {
+        "adjustable_climate_control": {
+          "status": "ambiguous",
+          "detail": "Fixture source says AC, but not whether the guest controls it individually."
+        },
+        "kitchen_or_kitchenette": {
+          "status": "confirmed",
+          "detail": "Fixture source states private kitchenette."
+        },
+        "stovetop": {
+          "status": "confirmed",
+          "detail": "Fixture source states induction hob."
+        },
+        "utensils": {
+          "status": "confirmed",
+          "detail": "Fixture source states basic cooking equipment."
+        },
+        "blackout_window_covering": {
+          "status": "ambiguous",
+          "detail": "Fixture source photo tags mention dark curtains, not blackout curtains."
+        }
+      }
+    },
+    {
+      "source_listing_id": "fixture-lis-001",
+      "name": "Fixture Lisbon kitchenette room",
+      "url": "https://example.com/fixture/lisbon-kitchenette-room",
+      "city": "Lisbon",
+      "neighborhood": "Arroios",
+      "location_text": "Near metro and bus links.",
+      "latitude": 38.731,
+      "longitude": -9.135,
+      "room_type": "private apartment",
+      "nightly_price_eur": 52.0,
+      "available_stay_lengths": [2, 3, 4],
+      "rating": 8.6,
+      "rating_scale": 10,
+      "review_count": 59,
+      "cancellation_policy": "Free cancellation",
+      "source_reliability": 0.62,
+      "amenities": {
+        "adjustable_climate_control": {
+          "status": "confirmed",
+          "detail": "Fixture source states individual heat pump."
+        },
+        "kitchen_or_kitchenette": {
+          "status": "confirmed",
+          "detail": "Fixture source states kitchenette."
+        },
+        "stovetop": {
+          "status": "confirmed",
+          "detail": "Fixture source states portable stovetop."
+        },
+        "utensils": {
+          "status": "confirmed",
+          "detail": "Fixture source states utensils."
+        },
+        "blackout_window_covering": {
+          "status": "confirmed",
+          "detail": "Fixture source states shutters."
+        }
+      }
+    },
+    {
+      "source_listing_id": "fixture-krk-001",
+      "name": "Fixture Krakow hostel bed",
+      "url": "https://example.com/fixture/krakow-hostel-bed",
+      "city": "Krakow",
+      "neighborhood": "Kazimierz",
+      "location_text": "Central, near tram.",
+      "latitude": 50.051,
+      "longitude": 19.945,
+      "room_type": "bed in shared dorm",
+      "nightly_price_eur": 18.0,
+      "available_stay_lengths": [2, 3, 4, 5, 6],
+      "rating": 8.9,
+      "rating_scale": 10,
+      "review_count": 411,
+      "cancellation_policy": "Non-refundable",
+      "source_reliability": 0.62,
+      "amenities": {
+        "adjustable_climate_control": {
+          "status": "missing",
+          "detail": "No guest-controlled climate evidence."
+        },
+        "kitchen_or_kitchenette": {
+          "status": "confirmed",
+          "detail": "Shared hostel kitchen is listed."
+        },
+        "stovetop": {
+          "status": "confirmed",
+          "detail": "Shared stovetop is listed."
+        },
+        "utensils": {
+          "status": "confirmed",
+          "detail": "Shared utensils are listed."
+        },
+        "blackout_window_covering": {
+          "status": "missing",
+          "detail": "No blackout evidence."
+        }
+      }
+    },
+    {
+      "source_listing_id": "fixture-cgn-001",
+      "name": "Fixture Cologne compact apartment",
+      "url": "https://example.com/fixture/cologne-compact-apartment",
+      "city": "Cologne",
+      "neighborhood": "Ehrenfeld",
+      "location_text": "Close to tram and S-Bahn service.",
+      "latitude": 50.951,
+      "longitude": 6.918,
+      "room_type": "private apartment",
+      "nightly_price_eur": 38.0,
+      "available_stay_lengths": [5, 6],
+      "rating": 8.2,
+      "rating_scale": 10,
+      "review_count": 22,
+      "cancellation_policy": "",
+      "source_reliability": 0.62,
+      "amenities": {
+        "adjustable_climate_control": {
+          "status": "confirmed",
+          "detail": "Fixture source states guest-controlled heat pump."
+        },
+        "kitchen_or_kitchenette": {
+          "status": "confirmed",
+          "detail": "Fixture source states kitchenette."
+        },
+        "stovetop": {
+          "status": "missing",
+          "detail": "Fixture source mentions microwave only."
+        },
+        "utensils": {
+          "status": "ambiguous",
+          "detail": "Fixture source photos show dishes, but text does not confirm utensils."
+        },
+        "blackout_window_covering": {
+          "status": "confirmed",
+          "detail": "Fixture source states shutters."
+        }
+      }
+    }
+  ]
+}

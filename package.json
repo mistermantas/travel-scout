@@ -1,0 +1,23 @@
+{
+  "name": "travel-scout",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "TypeScript travel-deal discovery agent for short European accommodation stays.",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build --silent && node --test dist/test/*.test.js",
+    "deals": "npm run build --silent && node dist/src/cli.js",
+    "start": "npm run build --silent && node dist/src/server.js",
+    "verify": "npm run lint && npm run test && npm run deals -- --config config.example.json --out reports --today 2026-07-04 --no-write-state"
+  },
+  "dependencies": {
+    "lucide": "^0.468.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "typescript": "^5.5.3"
+  }
+}

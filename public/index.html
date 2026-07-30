@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f2ed" />
+    <title>Travel Scout</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark"><i data-lucide="telescope"></i></span>
+          <div>
+            <h1>Travel Scout</h1>
+            <p id="run-status">Loading cached offers...</p>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-button mobile-only" id="open-settings" type="button" aria-label="Open settings" title="Settings">
+            <i data-lucide="sliders-horizontal"></i>
+          </button>
+          <button class="button secondary" id="save-config" type="button">
+            <i data-lucide="save"></i>
+            Save settings
+          </button>
+          <button class="button secondary" id="live-check" type="button">
+            <i data-lucide="globe-2"></i>
+            Search web
+          </button>
+          <button class="button primary" id="cached-check" type="button">
+            <i data-lucide="scan-search"></i>
+            Check deals
+          </button>
+        </div>
+      </header>
+
+      <aside class="settings-panel" id="settings-panel" aria-label="Search settings">
+        <div class="settings-heading">
+          <h2>Search settings</h2>
+          <div class="settings-heading-actions">
+            <button class="text-button" id="reset-config" type="button">Reset</button>
+            <button class="icon-button mobile-only" id="close-settings" type="button" aria-label="Close settings" title="Close">
+              <i data-lucide="x"></i>
+            </button>
+          </div>
+        </div>
+
+        <form id="config-form">
+          <section class="settings-section">
+            <h3>Price per night</h3>
+            <div class="price-band">
+              <label>
+                <span>Preferred</span>
+                <span class="money-input"><b>€</b><input id="preferred-price" type="number" min="1" step="1" /></span>
+              </label>
+              <label>
+                <span>Penalty after</span>
+                <span class="money-input"><b>€</b><input id="penalty-price" type="number" min="1" step="1" /></span>
+              </label>
+              <label>
+                <span>Maximum</span>
+                <span class="money-input"><b>€</b><input id="max-price" type="number" min="1" step="1" /></span>
+              </label>
+            </div>
+          </section>
+
+          <section class="settings-section">
+            <h3>Stay length</h3>
+            <div class="segmented-checks" id="stay-lengths"></div>
+          </section>
+
+          <section class="settings-section">
+            <div class="section-title-row">
+              <h3>Cities</h3>
+              <span id="city-count"></span>
+            </div>
+            <div class="check-grid" id="cities"></div>
+          </section>
+
+          <section class="settings-section">
+            <h3>Date horizon</h3>
+            <div class="field-grid two">
+              <label><span>Start month</span><input id="start-month" type="number" min="0" max="36" /></label>
+              <label><span>End month</span><input id="end-month" type="number" min="0" max="36" /></label>
+              <label><span>Step days</span><input id="step-days" type="number" min="1" max="120" /></label>
+              <label><span>Results</span><input id="result-limit" type="number" min="1" max="500" /></label>
+            </div>
+          </section>
+
+          <section class="settings-section">
+            <h3>Quality floor</h3>
+            <div class="field-grid two">
+              <label><span>Rating /10</span><input id="min-rating" type="number" min="0" max="10" step="0.1" /></label>
+              <label><span>Reviews</span><input id="min-reviews" type="number" min="0" step="1" /></label>
+              <label><span>Transit confidence</span><input id="min-transit" type="number" min="0" max="1" step="0.05" /></label>
+              <label><span>Commute minutes</span><input id="commute-minutes" type="number" min="1" max="180" /></label>
+            </div>
+          </section>
+
+          <section class="settings-section">
+            <h3>Amenities</h3>
+            <div class="amenity-list" id="amenities"></div>
+          </section>
+
+          <section class="settings-section">
+            <h3>Sources</h3>
+            <div class="source-list" id="sources"></div>
+          </section>
+
+          <section class="settings-section compact">
+            <label class="toggle-row">
+              <span>Allow shared rooms</span>
+              <input id="allow-shared" type="checkbox" role="switch" />
+            </label>
+          </section>
+        </form>
+        <div class="settings-mobile-actions mobile-only">
+          <button class="button secondary" id="save-config-mobile" type="button">
+            <i data-lucide="save"></i>
+            Save
+          </button>
+          <button class="button secondary" id="live-check-mobile" type="button">
+            <i data-lucide="globe-2"></i>
+            Search web
+          </button>
+          <button class="button primary" id="cached-check-mobile" type="button">
+            <i data-lucide="scan-search"></i>
+            Check
+          </button>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <section class="summary-strip" aria-label="Search summary">
+          <div><span>Accepted</span><strong id="accepted-count">—</strong></div>
+          <div><span>Checked</span><strong id="candidate-count">—</strong></div>
+          <div><span>Cities</span><strong id="summary-city-count">—</strong></div>
+          <div><span>Date windows</span><strong id="window-count">—</strong></div>
+          <div class="price-legend">
+            <span><i class="dot preferred"></i>Under €<b id="legend-preferred">35</b></span>
+            <span><i class="dot stretch"></i>€<b id="legend-penalty">50</b>–<b id="legend-max">80</b></span>
+          </div>
+        </section>
+
+        <section class="results-toolbar">
+          <nav class="tabs" aria-label="Candidate status">
+            <button class="tab active" data-view="accepted" type="button">Accepted <span id="accepted-tab-count">0</span></button>
+            <button class="tab" data-view="all" type="button">All <span id="all-tab-count">0</span></button>
+            <button class="tab" data-view="excluded" type="button">Excluded <span id="excluded-tab-count">0</span></button>
+          </nav>
+          <div class="toolbar-controls">
+            <label class="search-field">
+              <i data-lucide="search"></i>
+              <input id="result-search" type="search" placeholder="City, property, source" aria-label="Filter results" />
+            </label>
+            <select id="result-sort" aria-label="Sort results">
+              <option value="score">Best value</option>
+              <option value="price">Lowest price</option>
+              <option value="rating">Highest rating</option>
+              <option value="confidence">Highest confidence</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="source-status" id="source-status" aria-label="Source status"></section>
+        <section class="results-list" id="results" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <div class="toast-region" id="toast-region" aria-live="polite"></div>
+    <div class="loading-overlay" id="loading-overlay" hidden>
+      <div class="loading-indicator">
+        <i data-lucide="loader-circle"></i>
+        <strong id="loading-title">Checking cached sources</strong>
+        <span id="loading-detail">This should only take a moment.</span>
+      </div>
+    </div>
+
+    <script src="/vendor/lucide.js"></script>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

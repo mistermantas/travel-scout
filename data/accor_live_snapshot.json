@@ -1,0 +1,127 @@
+{
+  "fetched_at": "2026-07-05",
+  "source_tool": "Accor official live-rate connector",
+  "pricing_note": "Rates are real availability returned by the Accor connector. Pricing context is TOTAL_STAY in EUR, taxes excluded where noted. memberRate requires free ALL Accor membership when present.",
+  "listings": [
+    {
+      "source_listing_id": "accor-7148-2026-12-06-2n",
+      "name": "ibis budget Warszawa West Station",
+      "url": "https://all.accor.com/hotel/7148/index.en.shtml",
+      "city": "Warsaw",
+      "neighborhood": "West Station / Ochota",
+      "location_text": "City centre, close to West Railway Station; approximately 700 m from Warszawa Zachodnia station and near public transport stops.",
+      "latitude": 52.2193,
+      "longitude": 20.9626,
+      "room_type": "private hotel room",
+      "check_in": "2026-12-06",
+      "check_out": "2026-12-08",
+      "nights": 2,
+      "total_price_eur": 90,
+      "standard_rate_eur": 100,
+      "member_rate_eur": 90,
+      "nightly_price_eur": 45,
+      "rating": 4.3,
+      "rating_scale": 5,
+      "review_count": 1265,
+      "cancellation_policy": "Accor page says cancellation is managed via all.accor.com/app/customer service; special terms may apply.",
+      "source_reliability": 0.86,
+      "pricing_context": {
+        "tax": "TAXES_EXCLUDED",
+        "aggregation_type": "TOTAL_STAY",
+        "currency": "EUR",
+        "offer_type": "PUBLIC",
+        "adults_count": 1
+      },
+      "amenities": {
+        "adjustable_climate_control": {
+          "status": "ambiguous",
+          "detail": "Official Accor page states air-conditioned rooms, but does not prove guest-adjustable individual controls."
+        },
+        "kitchen_or_kitchenette": {
+          "status": "missing",
+          "detail": "Official Accor page does not list a kitchen or kitchenette."
+        },
+        "stovetop": {
+          "status": "missing",
+          "detail": "Official Accor page does not list a stovetop."
+        },
+        "utensils": {
+          "status": "missing",
+          "detail": "Official Accor page does not list cooking utensils."
+        },
+        "blackout_window_covering": {
+          "status": "missing",
+          "detail": "Official Accor page does not list blackout curtains, shades, or shutters."
+        }
+      },
+      "transit": {
+        "status": "confirmed",
+        "detail": "Official Accor page says the hotel is about 700 m from Warszawa Zachodnia station and near public transport stops.",
+        "source": "official Accor property page"
+      },
+      "evidence_urls": [
+        "https://all.accor.com/hotel/7148/index.en.shtml"
+      ]
+    },
+    {
+      "source_listing_id": "accor-3129-2026-10-04-2n",
+      "name": "ibis Warszawa Ostrobramska",
+      "url": "https://all.accor.com/hotel/3129/index.en.shtml",
+      "city": "Warsaw",
+      "neighborhood": "Ostrobramska / Praga area",
+      "location_text": "Eastern Warsaw near Praga Polnoc; official page says easy access to other parts of the city and center trip about 30 minutes.",
+      "latitude": 52.232938,
+      "longitude": 21.119488,
+      "room_type": "private hotel room",
+      "check_in": "2026-10-04",
+      "check_out": "2026-10-06",
+      "nights": 2,
+      "total_price_eur": 98,
+      "standard_rate_eur": 108,
+      "member_rate_eur": 98,
+      "nightly_price_eur": 49,
+      "rating": 4.4,
+      "rating_scale": 5,
+      "review_count": 460,
+      "cancellation_policy": "Accor page says cancellation is managed via all.accor.com/app/customer service; special terms may apply.",
+      "source_reliability": 0.86,
+      "pricing_context": {
+        "tax": "TAXES_EXCLUDED",
+        "aggregation_type": "TOTAL_STAY",
+        "currency": "EUR",
+        "offer_type": "PUBLIC",
+        "adults_count": 1
+      },
+      "amenities": {
+        "adjustable_climate_control": {
+          "status": "ambiguous",
+          "detail": "Official Accor page lists air conditioning, but does not prove guest-adjustable individual controls."
+        },
+        "kitchen_or_kitchenette": {
+          "status": "missing",
+          "detail": "Official Accor page does not list a kitchen or kitchenette."
+        },
+        "stovetop": {
+          "status": "missing",
+          "detail": "Official Accor page does not list a stovetop."
+        },
+        "utensils": {
+          "status": "missing",
+          "detail": "Official Accor page does not list cooking utensils."
+        },
+        "blackout_window_covering": {
+          "status": "missing",
+          "detail": "Official Accor page does not list blackout curtains, shades, or shutters."
+        }
+      },
+      "transit": {
+        "status": "confirmed",
+        "detail": "Official Accor page says Ostrobramska bus stop is a 2-minute walk, Grochowska bus stop is a 5-minute walk, and Warszawa Wschodnia railway station is a 15-minute drive.",
+        "source": "official Accor property page"
+      },
+      "evidence_urls": [
+        "https://all.accor.com/hotel/3129/index.en.shtml"
+      ]
+    }
+  ]
+}

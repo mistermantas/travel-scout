@@ -1,0 +1,38 @@
+name: travel-deals
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+  schedule:
+    - cron: "21 7 * * *"
+  workflow_dispatch:
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: package-lock.json
+
+      - run: npm ci
+
+      - run: npm run typecheck
+
+      - run: npm run test
+
+      - run: npm run deals -- --config config.example.json --out reports --no-write-state
+        env:
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: travel-deal-report
+          path: |
+            reports/travel-deals.md
+            reports/travel-deals.json
